@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Swad Ghar Ka | Login</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #f9fafb, #e5e7eb);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Container */
+.container {
+  display: flex;
+  width: 900px;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.1);
+}
+
+/* Left Form */
+.form-section {
+  width: 50%;
+  padding: 40px;
+}
+
+.form-section h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.form-section p {
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+/* Floating Inputs */
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+}
+
+.input-group label {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  background: white;
+  padding: 0 5px;
+  color: #9ca3af;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+  top: -8px;
+  font-size: 11px;
+  color: #2563eb;
+}
+
+/* Password toggle */
+.password-toggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* Button */
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: #2563eb;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+/* Message */
+.msg {
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+/* Register link */
+.register-link {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.register-link a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+/* Right Panel */
+.info-section {
+  width: 50%;
+  background: linear-gradient(135deg, #1e3a8a, #6d28d9, #9333ea);
+  box-shadow: 0 20px 40px rgba(109, 40, 217, 0.4);
+  color: white;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.info-section h1 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+.info-section p {
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+  .container {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .form-section, .info-section {
+    width: 100%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- LOGIN FORM -->
+  <div class="form-section">
+    <h2>Welcome Back</h2>
+    <p>Login to continue 🍛</p>
+
+    <div class="input-group">
+      <input type="email" id="email" required placeholder=" ">
+      <label>Email Address</label>
+    </div>
+
+    <div class="input-group">
+      <input type="password" id="password" required placeholder=" ">
+      <label>Password</label>
+      <span class="password-toggle" onclick="togglePass()">👁️</span>
+    </div>
+
+    <button onclick="login()">Login</button>
+    <p class="msg" id="msg"></p>
+
+    <!-- Redirect -->
+    <p class="register-link">
+      Don’t have an account? 
+      <a href="signin.html">Sign Up</a>
+    </p>
+  </div>
+
+  <!-- INFO -->
+  <div class="info-section">
+    <h1>Welcome Back!</h1>
+    <p>
+      Continue your journey with delicious homemade meals. 
+      Log in to explore your favorite dishes and exclusive offers.
+    </p>
+  </div>
+
+</div>
+
+<script>
+
+function togglePass() {
+
+  let field =
+    document.getElementById("password");
+
+  field.type =
+    field.type === "password"
+    ? "text"
+    : "password";
+}
+
+
+function login() {
+
+  let email =
+    document.getElementById("email").value;
+
+  let pass =
+    document.getElementById("password").value;
+
+  let msg =
+    document.getElementById("msg");
+
+  // VALIDATION
+  if (!email || !pass) {
+
+    msg.textContent =
+      "⚠️ Please fill all fields";
+
+    msg.style.color = "orange";
+
+    return;
+  }
+
+  // LOGIN API
+  fetch("/api/auth/login", {
+
+    method: "POST",
+
+    headers: {
+      "Content-Type": "application/json"
+    },
+
+    body: JSON.stringify({
+
+      email: email,
+
+      password: pass
+
+    })
+
+  })
+
+  .then(response => {
+
+    if (!response.ok) {
+
+      throw new Error(
+        "Invalid credentials"
+      );
+    }
+
+    return response.json();
+  })
+
+  .then(data => {
+
+    // SUCCESS MESSAGE
+    msg.textContent =
+      "✅ Login successful!";
+
+    msg.style.color = "green";
+
+    // STORE USER DETAILS
+    localStorage.setItem(
+
+      "loggedInUser",
+
+      data.name || email.split("@")[0]
+    );
+
+    localStorage.setItem(
+
+      "loggedInEmail",
+
+      email
+    );
+
+    // REDIRECT
+    setTimeout(() => {
+
+      window.location.href =
+        "index.html";
+
+    }, 1000);
+
+  })
+
+  .catch(error => {
+
+    msg.textContent =
+      "❌ Invalid email or password";
+
+    msg.style.color = "red";
+
+    console.error(error);
+
+  });
+}
+
+</script>
+<script src="api.js"></script>
+</body>
+</html>

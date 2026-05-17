@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+    Swad Ghar Ka - Cart
+  </title>
+
+  <!-- PDF LIBRARY -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+  <style>
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fdf6f0;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    .section {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      padding: 20px;
+      width: 300px;
+      min-height: 400px;
+    }
+
+    .item-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 10px 0;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 5px;
+    }
+
+    .item-row button {
+      background: red;
+      border: none;
+      color: white;
+      border-radius: 4px;
+      padding: 3px 8px;
+      cursor: pointer;
+    }
+
+    .pay-btn {
+      margin-top: 15px;
+      width: 100%;
+      padding: 12px;
+      background: #4CAF50;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .pay-btn:hover {
+      background: #45a049;
+    }
+
+    .qr-img {
+      width: 100%;
+      margin-top: 10px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .choose-btn {
+      padding: 12px 24px;
+      background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+    }
+
+    .choose-btn a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .gov-footer {
+      width: 100%;
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 30px;
+      margin-top: 30px;
+    }
+
+    .gov-footer a {
+      color: #ccc;
+      text-decoration: none;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- CART -->
+  <div class="section">
+
+    <h2>🧺 Selected Items</h2>
+
+    <div id="cart-items"></div>
+
+    <p>
+      <strong>Total:</strong>
+      ₹<span id="total-amount">0</span>
+    </p>
+
+    <a href="home.html">
+      <button class="pay-btn">
+        Select More
+      </button>
+    </a>
+
+  </div>
+
+  <!-- PAYMENT -->
+  <div class="section">
+
+    <h2>💳 Payment</h2>
+
+    <label>UPI ID</label>
+
+    <input
+      type="text"
+      id="payment-id"
+      placeholder="user@upi">
+
+    <label>Phone Number</label>
+
+    <input
+      type="number"
+      id="phone"
+      placeholder="Enter your number">
+
+    <label>Scan & Pay</label>
+
+    <img
+      src="sweets/QR_Code.jpg"
+      class="qr-img">
+
+    <button
+      class="pay-btn"
+      onclick="processPayment()">
+
+      Pay Now
+
+    </button>
+
+    <p id="pay-msg"></p>
+
+  </div>
+
+  <!-- ORDER SUMMARY -->
+  <div class="section">
+
+    <h2>📦 Order Summary</h2>
+
+    <div id="order-summary">
+      No order placed.
+    </div>
+
+    <button
+      id="download-btn"
+      class="pay-btn"
+      style="display:none;"
+      onclick="downloadInvoice()">
+
+      ⬇ Download Invoice
+
+    </button>
+
+  </div>
+
+  <!-- SEAT BUTTON -->
+  <div style="
+    width:100%;
+    display:flex;
+    justify-content:center;
+    margin-top:20px;
+  ">
+
+    <button class="choose-btn">
+
+      <a href="seatselection.html">
+        Choose Seats
+      </a>
+
+    </button>
+
+  </div>
+
+  <!-- INVOICE -->
+  <div id="invoice"
+  style="
+    display:none;
+    background:white;
+    width:650px;
+    padding:25px;
+    color:black;
+    font-family:Arial;
+  ">
+
+    <!-- HEADER -->
+    <div style="
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      border-bottom:3px solid orange;
+      padding-bottom:15px;
+    ">
+
+      <div>
+
+        <img
+          src="images/logo1.png"
+  			height="150",
+  			width="280">
+
+      </div>
+
+      <div style="text-align:right;">
+
+        <h1 style="
+          margin:0;
+          color:orange;
+        ">
+          SWAD GHAR KA
+        </h1>
+
+        <p>Authentic Indian Cuisine</p>
+
+        <p>📞 +91 6360928405</p>
+
+        <p>📍 Kalaburgi, Karnataka</p>
+
+      </div>
+
+    </div>
+
+    <!-- TITLE -->
+    <div style="
+      text-align:center;
+      margin-top:20px;
+    ">
+
+      <h2 style="
+        background:orange;
+        color:white;
+        padding:10px 20px;
+        border-radius:6px;
+        display:inline-block;
+      ">
+
+        PAYMENT INVOICE
+
+      </h2>
+
+    </div>
+
+    <!-- DETAILS -->
+    <div style="
+      display:flex;
+      justify-content:space-between;
+      margin-top:30px;
+    ">
+
+      <div>
+
+        <p>
+          <strong>Order ID:</strong>
+          <span id="inv-order-id"></span>
+        </p>
+
+        <p>
+          <strong>Customer Email:</strong>
+          <span id="inv-name"></span>
+        </p>
+
+        <p>
+          <strong>Phone:</strong>
+          <span id="inv-phone"></span>
+        </p>
+
+      </div>
+
+      <div>
+
+        <p>
+          <strong>Date:</strong>
+          <span id="inv-date"></span>
+        </p>
+
+        <p>
+          <strong>Status:</strong>
+
+          <span style="color:green;">
+            PAID ✅
+          </span>
+
+        </p>
+
+      </div>
+
+    </div>
+
+    <!-- TABLE -->
+    <h3 style="
+      margin-top:25px;
+      color:orange;
+    ">
+
+      Ordered Items
+
+    </h3>
+
+    <table
+      width="100%"
+      style="
+        border-collapse:collapse;
+        margin-top:10px;
+      ">
+
+      <thead>
+
+        <tr style="
+          background:orange;
+          color:white;
+        ">
+
+          <th style="padding:10px;">
+            Product
+          </th>
+
+          <th style="padding:10px;">
+            Qty
+          </th>
+
+          <th style="padding:10px;">
+            Price
+          </th>
+
+        </tr>
+
+      </thead>
+
+      <tbody id="invoice-items">
+
+      </tbody>
+
+    </table>
+
+    <!-- TOTAL -->
+    <div style="
+      text-align:right;
+      margin-top:20px;
+    ">
+
+      <h2 id="inv-total"
+      style="
+        color:orange;
+      ">
+
+      </h2>
+
+    </div>
+
+    <!-- FOOTER -->
+    <div style="
+      margin-top:30px;
+      text-align:center;
+      border-top:2px dashed #999;
+      padding-top:15px;
+    ">
+
+      <h2>
+        Thank You For Ordering ❤️
+      </h2>
+
+      <p>
+        We hope you enjoy your meal!
+      </p>
+
+      <p style="
+        color:gray;
+        font-size:14px;
+      ">
+        Swad Ghar Ka | Taste That Feels Like Home
+      </p>
+
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="gov-footer">
+
+    <p>
+
+      Content Owned and Maintained by
+      <strong>Swad Ghar Ka</strong>
+
+      <br>
+
+      Designed & Developed by
+      <strong>Samarth Mane</strong>
+
+    </p>
+
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script>
+
+    let cartItems =
+      JSON.parse(
+        localStorage.getItem("thaliItems")
+      ) || [];
+
+    let total = 0;
+
+    let orderData = {};
+
+    // LOAD CART
+    function loadCart() {
+
+      const cartContainer =
+        document.getElementById("cart-items");
+
+      cartContainer.innerHTML = "";
+
+      total = 0;
+
+      if (cartItems.length === 0) {
+
+        cartContainer.innerHTML =
+          "<p>Your cart is empty.</p>";
+
+      }
+
+      cartItems.forEach((item, index) => {
+
+        const div =
+          document.createElement("div");
+
+        div.className = "item-row";
+
+        div.innerHTML = `
+
+          <span>
+            ${item.name} x${item.qty}
+          </span>
+
+          <span>
+            ₹${item.totalPrice}
+          </span>
+
+          <button onclick="removeItem(${index})">
+            ✕
+          </button>
+
+        `;
+
+        cartContainer.appendChild(div);
+
+        total += item.totalPrice;
+      });
+
+      document.getElementById(
+        "total-amount"
+      ).innerText = total;
+    }
+
+    // REMOVE ITEM
+    function removeItem(index) {
+
+      cartItems.splice(index, 1);
+
+      localStorage.setItem(
+        "thaliItems",
+        JSON.stringify(cartItems)
+      );
+
+      loadCart();
+    }
+
+    // PAYMENT
+    async function processPayment() {
+
+    const upi =
+        document.getElementById(
+            "payment-id"
+        ).value;
+
+    const phone =
+        document.getElementById(
+            "phone"
+        ).value;
+
+    // VALIDATION
+    if (!upi || !phone) {
+
+        document.getElementById(
+            "pay-msg"
+        ).innerHTML =
+
+            "❌ Enter valid payment details.";
+
+        document.getElementById(
+            "pay-msg"
+        ).style.color = "red";
+
+        return;
+    }
+
+    // ORDER ID
+    const orderId =
+        "SGK" +
+        Math.floor(Math.random() * 100000);
+
+    // STORE ORDER
+    orderData = {
+
+        orderId,
+
+        customerName:
+        	localStorage.getItem(
+        	        "loggedInEmail"
+        	    ),
+
+        phone,
+
+        total,
+
+        date:
+            new Date().toLocaleString(),
+
+        items: [...cartItems]
+    };
+
+    // SAVE ORDER TO DATABASE
+    fetch("/api/orders", {
+
+        method: "POST",
+
+        headers: {
+            "Content-Type": "application/json"
+        },
+
+        body: JSON.stringify({
+
+            orderId: orderId,
+
+            customerName: localStorage.getItem(
+                    "loggedInEmail"
+            ),
+            
+            phone: phone,
+
+            total: total,
+
+            items: JSON.stringify(cartItems)
+
+        })
+
+    })
+    .then(response => response.json())
+    .then(data => {
+
+        console.log(
+            "Order Saved Successfully:",
+            data
+        );
+
+    })
+    .catch(error => {
+
+        console.error(
+            "Error Saving Order:",
+            error
+        );
+
+    });
+
+    // SUCCESS MESSAGE
+    document.getElementById(
+        "pay-msg"
+    ).innerHTML =
+
+        "✅ Payment Successful!";
+
+    document.getElementById(
+        "pay-msg"
+    ).style.color = "green";
+
+    // ORDER SUMMARY
+    document.getElementById(
+        "order-summary"
+    ).innerHTML = `
+
+        <h3 style="color:green;">
+            🎉 Order Confirmed
+        </h3>
+
+        <p>
+            <strong>Order ID:</strong>
+            ${orderId}
+        </p>
+
+        <p>
+            <strong>Phone:</strong>
+            ${phone}
+        </p>
+
+        <p>
+            <strong>Total Paid:</strong>
+            ₹${total}
+        </p>
+    `;
+
+    // SHOW DOWNLOAD BUTTON
+    document.getElementById(
+        "download-btn"
+    ).style.display = "block";
+
+    // INVOICE DETAILS
+    document.getElementById(
+        "inv-order-id"
+    ).innerText = orderId;
+
+    document.getElementById(
+        "inv-name"
+    ).innerText =
+        orderData.customerName;
+
+    document.getElementById(
+        "inv-phone"
+    ).innerText = phone;
+
+    document.getElementById(
+        "inv-date"
+    ).innerText =
+        orderData.date;
+
+    document.getElementById(
+        "inv-total"
+    ).innerText =
+        "Total Paid : ₹" + total;
+
+    // TABLE
+    const tbody =
+        document.getElementById(
+            "invoice-items"
+        );
+
+    tbody.innerHTML = "";
+
+    orderData.items.forEach(item => {
+
+        tbody.innerHTML += `
+
+            <tr>
+
+                <td style="
+                    padding:10px;
+                    border:1px solid #ddd;
+                ">
+                    ${item.name}
+                </td>
+
+                <td style="
+                    padding:10px;
+                    border:1px solid #ddd;
+                    text-align:center;
+                ">
+                    ${item.qty}
+                </td>
+
+                <td style="
+                    padding:10px;
+                    border:1px solid #ddd;
+                    text-align:center;
+                ">
+                    ₹${item.totalPrice}
+                </td>
+
+            </tr>
+
+        `;
+    });
+
+}
+
+    // DOWNLOAD INVOICE
+async function downloadInvoice() {
+
+    const invoice =
+        document.getElementById(
+            "invoice"
+        );
+
+    // SHOW INVOICE
+    invoice.style.display = "block";
+
+    // WAIT FOR LOGO / IMAGES TO LOAD
+    await new Promise(resolve =>
+        setTimeout(resolve, 1000)
+    );
+
+    const options = {
+
+        margin: 5,
+
+        filename:
+            `SGKInvoice_${orderData.orderId}.pdf`,
+
+        image: {
+            type: 'jpeg',
+            quality: 1
+        },
+
+        html2canvas: {
+
+            scale: 2,
+
+            useCORS: true
+        },
+
+        jsPDF: {
+
+            unit: 'mm',
+
+            format: 'a4',
+
+            orientation: 'portrait'
+        }
+    };
+
+    html2pdf()
+        .set(options)
+        .from(invoice)
+        .save()
+        .then(() => {
+
+            // HIDE INVOICE
+            invoice.style.display = "none";
+
+            // CLEAR CART
+            cartItems = [];
+
+            localStorage.removeItem(
+                "thaliItems"
+            );
+
+            loadCart();
+
+            // HIDE DOWNLOAD BUTTON
+            document.getElementById(
+                "download-btn"
+            ).style.display = "none";
+
+        });
+}
+
+// ON LOAD
+window.onload = loadCart;
+
+  </script>
+
+</body>
+
+</html>

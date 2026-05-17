@@ -1,0 +1,3255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swad Ghar Ka - By Samarth Mane|Home</title>
+    <link rel="stylesheet" href="home.css">
+    <script src="script.js" defer></script>
+    <style>
+    #resto2{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    padding: 20px;
+}
+
+.break_item{
+    background-color: #f3f3f3;
+    border-radius: 18px;
+    padding: 15px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
+
+.break_item:hover{
+    transform: scale(1.03);
+}
+
+.food-img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.food-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.food-info h2{
+    font-size: 24px;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+}
+
+.rating{
+    background-color: rgb(39, 190, 39);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.price{
+    margin-top: 10px;
+    text-align: right;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+    
+/* this is the lunch section*/
+
+
+.lunch_food{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    padding: 20px;
+}
+
+.lunch_item{
+    background-color: #f3f3f3;
+    border-radius: 18px;
+    padding: 15px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
+
+.lunch_item:hover{
+    transform: scale(1.03);
+}
+
+
+
+.food-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.food-info h2{
+    font-size: 24px;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+}
+
+/* this is the rooti section*/
+
+/* 4 ITEMS PER ROW */
+.rooti{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    padding: 20px;
+}
+
+/* CARD DESIGN */
+.rooti_item{
+    background-color: #f3f3f3;
+    border-radius: 18px;
+    padding: 15px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
+
+.rooti_item:hover{
+    transform: scale(1.03);
+}
+
+/* IMAGE */
+
+
+/* NAME + RATING */
+
+
+/* RATING */
+
+
+.section-title{
+    font-size: 26px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 20px;
+    margin-left: 15px;
+    margin-bottom: 20px;
+}
+
+/* GRID */
+.rice_food{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    padding: 20px;
+}
+
+/* CARD */
+.rice_item{
+    background-color: #f3f3f3;
+    border-radius: 22px;
+    padding: 15px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
+
+.rice_item:hover{
+    transform: scale(1.03);
+}
+
+/* IMAGE */
+.food-img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 18px;
+    cursor: pointer;
+}
+
+/* FOOD NAME */
+.rice_item h2{
+    font-size: 24px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 18px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* RATING + PRICE */
+.food-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+#resto1{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    padding: 20px;
+}
+
+.lunch_item{
+    background-color: #f3f3f3;
+    border-radius: 18px;
+    padding: 15px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
+
+.lunch_item:hover{
+    transform: scale(1.03);
+}
+
+/* IMAGE */
+.food-img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+/* FOOD NAME */
+.lunch_item h2{
+    font-size: 24px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+/* RATING + PRICE */
+.food-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+#resto3{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    padding: 20px;
+}
+
+.rice_item{
+    background-color: #f3f3f3;
+    border-radius: 18px;
+    padding: 15px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
+
+.rice_item:hover{
+    transform: scale(1.03);
+}
+
+.food-img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.food-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.food-info h2{
+    font-size: 24px;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+}
+
+
+
+
+
+/* this is naan section*/
+#resto4{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    padding: 20px;
+}
+
+.snacks_item{
+    background-color: #f3f3f3;
+    border-radius: 18px;
+    padding: 15px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
+
+.snacks_item:hover{
+    transform: scale(1.03);
+}
+
+.food-img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.food-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.food-info h2{
+    font-size: 24px;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+}
+
+
+
+
+/* this is sweets section*/
+#resto5{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    padding: 20px;
+}
+
+.sweet_item{
+    background-color: #f3f3f3;
+    border-radius: 18px;
+    padding: 15px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
+
+.sweet_item:hover{
+    transform: scale(1.03);
+}
+
+.food-img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.food-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.food-info h2{
+    font-size: 24px;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+}
+
+
+
+/* this is pizza and burger section*/
+
+#resto6{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    padding: 20px;
+}
+
+.pizza_item{
+    background-color: #f3f3f3;
+    border-radius: 18px;
+    padding: 15px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
+
+.pizza_item:hover{
+    transform: scale(1.03);
+}
+
+.food-img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.food-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.food-info h2{
+    font-size: 24px;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+}
+
+
+
+.price{
+    margin-top: 10px;
+    text-align: right;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* HEADER */
+.main-header{
+    width: 100%;
+    height: 90px;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 50px;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* LOGO */
+.logo{
+    height: 70px;
+    width: 210px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+/* NAVBAR */
+.navbar{
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+/* LINKS */
+.nav-link{
+    text-decoration: none;
+    color: #222;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    position: relative;
+    transition: 0.3s;
+}
+
+/* HOVER EFFECT */
+.nav-link:hover{
+    color: crimson;
+}
+
+/* UNDERLINE ANIMATION */
+.nav-link::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 3px;
+    background: crimson;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.nav-link:hover::after{
+    width: 100%;
+}
+
+/* CART BUTTON */
+.cart-btn{
+    width: 55px;
+    height: 55px;
+    background: crimson;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+}
+
+.cart-btn:hover{
+    transform: scale(1.1);
+    background: #222;
+}
+
+/* CART IMAGE */
+.cart-btn img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+/* MAIN SECTION */
+.hero-food-section{
+    width: 100%;
+    padding: 40px 50px;
+    background: linear-gradient(to right, #fff5f5, #fff);
+}
+
+/* HERO AREA */
+.hero-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+/* LEFT TEXT */
+.hero-text{
+    flex: 1;
+}
+
+.hero-text h1{
+    font-size: 65px;
+    font-family: 'Poppins', sans-serif;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+.hero-text p{
+    font-size: 22px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 30px;
+    max-width: 650px;
+}
+
+/* BUTTONS */
+.hero-buttons{
+    display: flex;
+    gap: 20px;
+}
+
+.theme-btn,
+.explore-btn{
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+/* THEME BUTTON */
+.theme-btn{
+    background: #222;
+    color: white;
+}
+
+.theme-btn:hover{
+    background: crimson;
+    transform: translateY(-3px);
+}
+
+/* EXPLORE BUTTON */
+.explore-btn{
+    background: crimson;
+    color: white;
+}
+
+.explore-btn:hover{
+    background: #222;
+    transform: translateY(-3px);
+}
+
+/* HERO IMAGE */
+.hero-image{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img{
+    width: 550px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 30px;
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.2);
+}
+
+/* FOOD GRID */
+.food-category-grid{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+}
+
+/* FOOD CARD */
+.food-card{
+    background: white;
+    border-radius: 25px;
+    overflow: hidden;
+    text-decoration: none;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.12);
+    transition: 0.3s;
+}
+
+.food-card:hover{
+    transform: translateY(-10px);
+}
+
+/* CARD IMAGE */
+.food-card img{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    
+}
+
+/* CARD TITLE */
+.food-card h3{
+    text-align: center;
+    padding: 18px;
+    font-size: 24px;
+    color: #222;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* FLOATING MENU BAR */
+.floating-menu{
+    width: 85%;
+    margin: 25px auto;
+    padding: 15px 20px;
+    background: rgba(255,255,255,0.9);
+    backdrop-filter: blur(10px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    border-radius: 60px;
+
+    box-shadow:
+    0px 5px 20px rgba(0,0,0,0.15);
+
+    position: sticky;
+    top: 95px;
+    z-index: 999;
+}
+
+/* MENU BUTTON */
+.menu-box{
+    position: relative;
+
+    text-decoration: none;
+    color: #222;
+
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+
+    padding: 14px 24px;
+
+    border-radius: 40px;
+
+    overflow: hidden;
+
+    transition: 0.35s ease;
+}
+
+/* HOVER */
+.menu-box:hover{
+    color: white;
+    transform: translateY(-4px);
+}
+
+/* BLINKING LIGHT EFFECT */
+.menu-box::before{
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -120%;
+
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.7),
+        transparent
+    );
+
+    transition: 0.6s;
+}
+
+/* LIGHT MOVE */
+.menu-box:hover::before{
+    left: 120%;
+}
+
+/* BACKGROUND GLOW */
+.menu-box::after{
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: crimson;
+
+    border-radius: 40px;
+
+    z-index: -1;
+
+    opacity: 0;
+    transition: 0.3s;
+}
+
+/* GLOW ON HOVER */
+.menu-box:hover::after{
+    opacity: 1;
+
+    box-shadow:
+    0px 0px 15px crimson,
+    0px 0px 35px crimson;
+}
+
+/* MENU HEADING */
+.menu-heading{
+    text-align: center;
+
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+
+    margin-top: 35px;
+    margin-bottom: 18px;
+
+    color: #222;
+
+    letter-spacing: 2px;
+
+    position: relative;
+}
+
+/* SIMPLE TOP BUTTON */
+#topBtn{
+    position: fixed;
+
+    bottom: 25px;
+    right: 25px;
+
+    padding: 12px 20px;
+
+    border: none;
+    border-radius: 80px;
+
+    background-color: #222;
+    color: white;
+
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    display: none;
+
+    z-index: 1000;
+
+    transition: 0.3s;
+}
+
+/* HOVER */
+#topBtn:hover{
+    background-color:#ff006e;
+}
+
+
+    </style>
+</head>
+<body>
+    <header class="main-header">
+
+    <div class="logo-section">
+        <img src="logo1.png" alt="Logo" class="logo">
+    </div>
+
+    <nav class="navbar">
+
+        <a href="about.html" class="nav-link">About</a>
+
+        <a href="review.html" class="nav-link">Reviews</a>
+
+        <a href="contact.html" class="nav-link">Contact</a>
+
+        <a href="rush.html" class="nav-link">Rush Hours</a>
+
+        <a href="mess.html" class="nav-link">Mess Section</a>
+
+        <a href="orderdet.html" class="cart-btn">
+            <img src="lunch/cart.jpg" alt="Cart">
+        </a>
+
+    </nav>
+
+</header><br>
+    
+    <section class="hero-food-section">
+
+    <div class="hero-content">
+
+        <div class="hero-text">
+            <h1>Heaven Starts Here 🍽️</h1>
+
+            <p>
+                Taste the best delicious foods, sweets, burgers, pizzas,
+                thalis and authentic Indian meals made with love.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#menuCard" class="explore-btn">
+                    Explore Menu
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <img src="images/southindianTheli.jpg" alt="Food Banner">
+        </div>
+
+    </div>
+
+    <!-- FOOD CATEGORIES -->
+    <div class="food-category-grid">
+
+        <a href="#idli" class="food-card">
+            <img src="images/idli.jpg" alt="Idli">
+            <h3>Idli</h3>
+        </a>
+
+        <a href="#dosa" class="food-card">
+            <img src="images/dosa.jpeg" alt="Dosa">
+            <h3>Dosa</h3>
+        </a>
+
+        <a href="#paneer" class="food-card">
+            <img src="images/paneer.jpg" alt="Paneer">
+            <h3>Shahi Paneer</h3>
+        </a>
+
+        <a href="thali.html" class="food-card">
+            <img src="images/northindianThali.jpeg" alt="North Indian Thali">
+            <h3>North Indian Thali</h3>
+        </a>
+
+        <a href="thali.html" class="food-card">
+            <img src="images/southindianTheli.jpg" alt="South Indian Thali">
+            <h3>South Indian Thali</h3>
+        </a>
+
+		<a href="#kaju" class="food-card">
+            <img src="lunch/kachori.jpeg" alt="Kachori">
+            <h3>Kachori</h3>
+        </a>
+        
+        <a href="#kaju" class="food-card">
+            <img src="images/kaju.gif" alt="Kaju Katli">
+            <h3>Kaju Katli</h3>
+        </a>
+
+        <a href="#pab" class="food-card">
+            <img src="images/pizza4.jpeg" alt="Pizza">
+            <h3>Pizza</h3>
+        </a>
+
+        <a href="#burger" class="food-card">
+            <img src="images/burger1.jpeg" alt="Burger">
+            <h3>Special Burger</h3>
+        </a>
+
+        <a href="#bbb" class="food-card">
+            <img src="images/Bisi-bele-bath.jpg" alt="Bisi Bele Bath">
+            <h3>Bisi Bele Bath</h3>
+        </a>
+
+    </div>
+
+</section>
+    <br>
+    
+    <p class="menu-heading">
+    ✨ Menu Section ✨
+</p>
+    <!-- HORIZONTAL FOOD MENU -->
+<div class="floating-menu" id="menuCard">
+
+    <a href="#brkfst" class="menu-box">
+        <span>Breakfast</span>
+    </a>
+
+    <a href="#lunch" class="menu-box">
+        <span>Main Course</span>
+    </a>
+
+    <a href="#main" class="menu-box">
+        <span>Bread</span>
+    </a>
+
+    <a href="#rice" class="menu-box">
+        <span>Rice Items</span>
+    </a>
+
+    <a href="#snacks" class="menu-box">
+        <span>Snacks</span>
+    </a>
+
+    <a href="#sweets" class="menu-box">
+        <span>Sweets</span>
+    </a>
+
+    <a href="#pab" class="menu-box">
+        <span>Pizza & Burger</span>
+    </a>
+
+</div>
+    <br>
+
+
+    
+	<div class="brkfst" id="brkfst">
+
+    <p class="section-title"><b>Break Fast Section</b></p>
+
+    <div class="breakfast" id="resto2">
+
+        <!-- 1 -->
+        <div class="break_item">
+            <img src="images/idli.jpg"
+                 alt="Idli"
+                 onclick="addToCart('Idli', 45)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Idli</h2>
+                <span class="rating">4.4⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹45 For one
+            </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="break_item">
+            <img src="images/dosa.jpeg"
+                 alt="Dosa"
+                 onclick="addToCart('Dosa', 55)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Dosa</h2>
+                <span class="rating">4.6⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹55 For one
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="break_item">
+            <img src="breakfast/wada.jpeg"
+                 alt="Medu Wada"
+                 onclick="addToCart('Wada', 55)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Medu Wada</h2>
+                <span class="rating">4.4⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹55 For one
+            </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="break_item">
+            <img src="breakfast/poori.jpg"
+                 alt="Poori Bhaji"
+                 onclick="addToCart('Poori Bhaji', 55)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Poori Bhaji</h2>
+                <span class="rating">4.3⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹55 For one
+            </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="break_item">
+            <img src="breakfast/Upma.jpg"
+                 alt="Upma"
+                 onclick="addToCart('Upma', 40)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Upma</h2>
+                <span class="rating">4.1⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹40 For one
+            </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="break_item">
+            <img src="breakfast/sheera.jpeg"
+                 alt="Sheera"
+                 onclick="addToCart('Sheera', 40)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Sheera</h2>
+                <span class="rating">4.2⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹40 For one
+            </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="break_item">
+            <img src="breakfast/uttapam.jpeg"
+                 alt="Uttapam"
+                 onclick="addToCart('Uttapam', 60)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Uttapam</h2>
+                <span class="rating">4.4⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹60 For one
+            </div>
+        </div>
+
+        <!-- 8 -->
+        <div class="break_item">
+            <img src="breakfast/paneerDosa.jpeg"
+                 alt="Paneer Dosa"
+                 onclick="addToCart('Paneer Dosa', 70)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Paneer Dosa</h2>
+                <span class="rating">4.5⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹70 For one
+            </div>
+        </div>
+
+        <!-- 9 -->
+        <div class="break_item">
+            <img src="breakfast/idli-wada.jpeg"
+                 alt="Idli-Wada"
+                 onclick="addToCart('Idli-Wada', 60)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Idli-Wada</h2>
+                <span class="rating">4.4⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹60 For one
+            </div>
+        </div>
+
+        <!-- 10 -->
+        <div class="break_item">
+            <img src="breakfast/pooha.jpg"
+                 alt="Pooha"
+                 onclick="addToCart('Pooha', 45)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Pooha</h2>
+                <span class="rating">4.4⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹45 For one
+            </div>
+        </div>
+
+        <!-- 11 -->
+        <div class="break_item">
+            <img src="breakfast/c.jpg"
+                 alt="Chole-Bhature"
+                 onclick="addToCart('Chole-Bhature', 70)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Chole-Bhature</h2>
+                <span class="rating">4.3⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹70 For one
+            </div>
+        </div>
+
+        <!-- 12 -->
+        <div class="break_item">
+            <img src="breakfast/susla.jpg"
+                 alt="Susla"
+                 onclick="addToCart('Susla', 45)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Susla</h2>
+                <span class="rating">4.3⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹45 For one
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+    <br><br>
+    <div class="lunch" id="lunch">
+
+    <p class="section-title"><b>Main Course</b></p>
+
+    <div class="lunch_food">
+
+        <!-- 1 -->
+        <div class="lunch_item">
+            <img src="lunch/kadai-paneer.jpeg"
+                 alt="Kadai Paneer"
+                 onclick="addToCart('Kadai Paneer', 150)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Kadai Paneer</h2>
+                <span class="rating">4.6⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹150 For one
+            </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="lunch_item">
+            <img src="lunch/matar-paneer.jpg"
+                 alt="Mutter Paneer"
+                 onclick="addToCart('Matar Paneer', 145)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Mutter Paneer</h2>
+                <span class="rating">4.5⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹145 For one
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="lunch_item">
+            <img src="lunch/shahi-pnr.avif"
+                 alt="Shahi Paneer"
+                 onclick="addToCart('Shahi Paneer', 140)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Shahi Paneer</h2>
+                <span class="rating">4.3⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹140 For one
+            </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="lunch_item">
+            <img src="lunch/paneer-btr.jpeg"
+                 alt="Paneer Butter Masala"
+                 onclick="addToCart('Paneer butter Masala', 160)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Paneer Butter Masala</h2>
+                <span class="rating">4.6⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹160 For one
+            </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="lunch_item">
+            <img src="lunch/palak-pnr.jpg"
+                 alt="Palak Paneer"
+                 onclick="addToCart('Palak Paneer', 135)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Palak Paneer</h2>
+                <span class="rating">4.3⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹135 For one
+            </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="lunch_item">
+            <img src="lunch/bendi.jpg"
+                 alt="Spl Bendi Fry"
+                 onclick="addToCart('Spl Bendi Fry', 135)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Spl Bendi Fry</h2>
+                <span class="rating">4.3⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹135 For one
+            </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="lunch_item">
+            <img src="lunch/shev.jpg"
+                 alt="Spl Shev"
+                 onclick="addToCart('Spl Shev', 100)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Spl Shev</h2>
+                <span class="rating">4.5⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹100 For one
+            </div>
+        </div>
+
+        <!-- 8 -->
+        <div class="lunch_item">
+            <img src="lunch/stuffed capsicum.avif"
+                 alt="Stuffed Capsicum"
+                 onclick="addToCart('Stuffed Capsicum', 70)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Stuffed Capsicum</h2>
+                <span class="rating">4.4⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹70 For one
+            </div>
+        </div>
+
+        <!-- 9 -->
+        <div class="lunch_item">
+            <img src="lunch/kajuKurma.avif"
+                 alt="Kaju Kurma"
+                 onclick="addToCart('Kaju Kurma', 160)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Kaju Kurma</h2>
+                <span class="rating">4.6⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹160 For one
+            </div>
+        </div>
+
+        <!-- 10 -->
+        <div class="lunch_item">
+            <img src="lunch/malai-kofta.jpg"
+                 alt="Malai Kofta"
+                 onclick="addToCart('Malai Kofta', 145)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Malai Kofta</h2>
+                <span class="rating">4.5⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹145 For one
+            </div>
+        </div>
+
+        <!-- 11 -->
+        <div class="lunch_item">
+            <img src="lunch/shahi kofta.jpeg"
+                 alt="Shahi Kofta"
+                 onclick="addToCart('Shahi Kofta', 170)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Shahi Kofta</h2>
+                <span class="rating">4.3⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹170 For one
+            </div>
+        </div>
+
+        <!-- 12 -->
+        <div class="lunch_item">
+            <img src="lunch/soyabeen-kofta.jpg"
+                 alt="Soyabeen Kofta"
+                 onclick="addToCart('Soyabeen Kofta', 145)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Soyabeen Kofta</h2>
+                <span class="rating">4.3⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹145 For one
+            </div>
+        </div>
+
+        <!-- 13 -->
+        <div class="lunch_item">
+            <img src="lunch/spl soyabeen.jpg"
+                 alt="Spl Soyabean"
+                 onclick="addToCart('Spl Soyabean', 145)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Spl Soyabean</h2>
+                <span class="rating">4.5⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹145 For one
+            </div>
+        </div>
+
+        <!-- 14 -->
+        <div class="lunch_item">
+            <img src="lunch/dalfry.webp"
+                 alt="Spl Dal Fry"
+                 onclick="addToCart('Spl Dal Fry', 135)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Spl Dal Fry</h2>
+                <span class="rating">4.3⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹135 For one
+            </div>
+        </div>
+
+        <!-- 15 -->
+        <div class="lunch_item">
+            <img src="lunch/dalmakhni.jpeg"
+                 alt="Spl Dal Makhni"
+                 onclick="addToCart('Spl Dal Makhni', 135)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Spl Dal Makhni</h2>
+                <span class="rating">4.3⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹135 For one
+            </div>
+        </div>
+
+        <!-- 16 -->
+        <div class="lunch_item">
+            <img src="lunch/daltadka.webp"
+                 alt="Spl Dal Tadka"
+                 onclick="addToCart('Spl Dal Tadka', 140)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Spl Dal Tadka</h2>
+                <span class="rating">4.5⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹140 For one
+            </div>
+        </div>
+
+        <!-- 17 -->
+        <div class="lunch_item">
+            <img src="lunch/dal methi.jpeg"
+                 alt="Spl Dal Methi"
+                 onclick="addToCart('Spl Dal Methi', 140)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Spl Dal Methi</h2>
+                <span class="rating">4.4⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹140 For one
+            </div>
+        </div>
+
+        <!-- 18 -->
+        <div class="lunch_item">
+            <img src="lunch/dal kop.jpeg"
+                 alt="Spl Dal Kolhapuri"
+                 onclick="addToCart('Spl Dal Kolhapuri', 145)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Spl Dal Kolhapuri</h2>
+                <span class="rating">4.6⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹145 For one
+            </div>
+        </div>
+
+        <!-- 19 -->
+        <div class="lunch_item">
+            <img src="lunch/spl tomoto chuttney.jpg"
+                 alt="Spl Tomato Chuttney"
+                 onclick="addToCart('Spl Tomato Chuttney', 130)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Spl Tomato Chuttney</h2>
+                <span class="rating">4.3⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹130 For one
+            </div>
+        </div>
+
+        <!-- 20 -->
+        <div class="lunch_item">
+            <img src="lunch/dum alu.jpg"
+                 alt="Spl Dum Alu"
+                 onclick="addToCart('Spl-Dam Alu', 145)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Spl Dum Alu</h2>
+                <span class="rating">4.3⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹145 For one
+            </div>
+        </div>
+
+    </div>
+
+</div><br><br>
+
+        <div class="main" id="main">
+
+    <p class="section-title"><b>Tandoori Roti & Naan Kulcha</b></p>
+
+    <div class="rooti">
+
+        <!-- 1 -->
+        <div class="rooti_item">
+
+            <img src="lunch/naan.jpg"
+                 alt="Naan"
+                 onclick="addToCart('Naan', 26)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Naan</h2>
+                <span class="rating">4.5⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹26 For one
+            </div>
+
+        </div>
+
+        <!-- 2 -->
+        <div class="rooti_item">
+
+            <img src="lunch/but_naan.jpg"
+                 alt="Butter Naan"
+                 onclick="addToCart('Butter Naan', 30)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Butter Naan</h2>
+                <span class="rating">4.4⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹30 For one
+            </div>
+
+        </div>
+
+        <!-- 3 -->
+        <div class="rooti_item">
+
+            <img src="lunch/garlic naan.jpeg"
+                 alt="Spl Garlic Naan"
+                 onclick="addToCart('Spl Garlic Naan', 45)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Spl Garlic Naan</h2>
+                <span class="rating">4.2⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹45 For one
+            </div>
+
+        </div>
+
+        <!-- 4 -->
+        <div class="rooti_item">
+
+            <img src="lunch/Tandoori-Keema-Kulcha.jpg"
+                 alt="Spl Tandoori Kulcha"
+                 onclick="addToCart('Spl Tandoori Kulcha', 32)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Spl Tandoori Kulcha</h2>
+                <span class="rating">4.7⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹32 For one
+            </div>
+
+        </div>
+
+        <!-- 5 -->
+        <div class="rooti_item">
+
+            <img src="lunch/Butter-Kulcha.jpeg"
+                 alt="Spl Butter Kulcha"
+                 onclick="addToCart('Spl Butter Kulcha', 55)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Spl Butter Kulcha</h2>
+                <span class="rating">4.2⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹55 For one
+            </div>
+
+        </div>
+
+        <!-- 6 -->
+        <div class="rooti_item">
+
+            <img src="lunch/rumali.webp"
+                 alt="Rumali Rooti"
+                 onclick="addToCart('Rumali Rooti', 55)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Rumali Rooti</h2>
+                <span class="rating">4.4⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹55 For one
+            </div>
+
+        </div>
+
+        <!-- 7 -->
+        <div class="rooti_item">
+
+            <img src="lunch/chapati.jpeg"
+                 alt="Chapati"
+                 onclick="addToCart('Chapati', 20)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Chapati</h2>
+                <span class="rating">4.4⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹20 For one
+            </div>
+
+        </div>
+
+        <!-- 8 -->
+        <div class="rooti_item">
+
+            <img src="lunch/tandoori-r.jpeg"
+                 alt="Tandoori Rooti"
+                 onclick="addToCart('Tandoori Rooti', 28)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Tandoori Rooti</h2>
+                <span class="rating">4.5⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹28 For one
+            </div>
+
+        </div>
+
+    </div>
+
+</div><br><br>
+
+        <div class="rice" id="rice">
+
+    <p class="section-title"><b>Rice Items</b></p>
+
+    <div class="rice_food" id="resto3">
+
+        <!-- 1 -->
+        <div class="rice_item">
+            <img src="lunch/Veg palao.jpg"
+                 alt="Veg Palao"
+                 onclick="addToCart('Veg Palao', 140)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Veg Palao</h2>
+                <span class="rating">4.6⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹140 For one
+            </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="rice_item">
+            <img src="lunch/jeera rice.jpg"
+                 alt="Jeera Rice"
+                 onclick="addToCart('Jeera Rice', 125)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Jeera Rice</h2>
+                <span class="rating">4.5⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹125 For one
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="rice_item">
+            <img src="lunch/curd rice.JPG"
+                 alt="Curd Rice"
+                 onclick="addToCart('Curd Rice', 120)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Curd Rice</h2>
+                <span class="rating">4.6⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹120 For one
+            </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="rice_item">
+            <img src="lunch/masala rice.jpeg"
+                 alt="Masala Rice"
+                 onclick="addToCart('Masala Rice', 125)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Masala Rice</h2>
+                <span class="rating">4.4⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹125 For one
+            </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="rice_item">
+            <img src="lunch/dal kichdi.jpeg"
+                 alt="Dal Kichdi"
+                 onclick="addToCart('Dal Kichdi', 140)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Dal Kichdi</h2>
+                <span class="rating">4.4⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹140 For one
+            </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="rice_item">
+            <img src="lunch/White rice.jpg"
+                 alt="Plane White Rice"
+                 onclick="addToCart('Plane White Rice', 85)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Plane White Rice</h2>
+                <span class="rating">4.2⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹85 For one
+            </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="rice_item">
+            <img src="lunch/ghee rice.jpeg"
+                 alt="Spl Ghee Rice"
+                 onclick="addToCart('Spl Ghee Rice', 155)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Spl Ghee Rice</h2>
+                <span class="rating">4.5⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹155 For one
+            </div>
+        </div>
+
+        <!-- 8 -->
+        <div class="rice_item">
+            <img src="lunch/veg hyd biryani.webp"
+                 alt="Hydrabadi Veg Biryani"
+                 onclick="addToCart('Hydrabadi Veg Biryani', 175)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Hydrabadi Veg Biryani</h2>
+                <span class="rating">4.6⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹175 For one
+            </div>
+        </div>
+
+        <!-- 9 -->
+        <div class="rice_item">
+            <img src="lunch/soyapulao.jpg"
+                 alt="Soyabean Pulao"
+                 onclick="addToCart('Soyabean Pulao', 145)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Soyabean Pulao</h2>
+                <span class="rating">4.6⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹145 For one
+            </div>
+        </div>
+
+        <!-- 10 -->
+        <div class="rice_item">
+            <img src="lunch/soya biryani.jpeg"
+                 alt="Soyabean Biryani"
+                 onclick="addToCart('Soyabean Biryani', 165)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Soyabean Biryani</h2>
+                <span class="rating">4.7⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹165 For one
+            </div>
+        </div>
+
+        <!-- 11 -->
+        <div class="rice_item">
+            <img src="lunch/tomato rice.jpg"
+                 alt="Spl Tomato Rice"
+                 onclick="addToCart('Spl Tomato Rice', 140)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Spl Tomato Rice</h2>
+                <span class="rating">4.4⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹140 For one
+            </div>
+        </div>
+
+        <!-- 12 -->
+        <div class="rice_item">
+            <img src="lunch/lemon rice.jpg"
+                 alt="Lemon Rice"
+                 onclick="addToCart('Lemon Rice', 135)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Lemon Rice</h2>
+                <span class="rating">4.2⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹135 For one
+            </div>
+        </div>
+        
+        <!-- 13 -->
+<div class="rice_item">
+    <img src="lunch/puliyogare rice.jpeg"
+         alt="Puliyogare Rice"
+         onclick="addToCart('Puliyogare Rice', 155)"
+         class="food-img">
+
+    <div class="food-info">
+        <h2>Puliyogare Rice</h2>
+        <span class="rating">4.4⭐</span>
+    </div>
+
+    <div class="price">
+        <i>Price:</i> ₹155 For one
+    </div>
+</div>
+
+<!-- 14 -->
+<div class="rice_item">
+    <img src="lunch/bisi bele bath.webp"
+         alt="Bisi Bele Bath"
+         onclick="addToCart('Bisi Bele Bath', 165)"
+         class="food-img">
+
+    <div class="food-info">
+        <h2>Bisi Bele Bath</h2>
+        <span class="rating">4.7⭐</span>
+    </div>
+
+    <div class="price">
+        <i>Price:</i> ₹165 For one
+    </div>
+</div>
+
+<!-- 15 -->
+<div class="rice_item">
+    <img src="lunch/spl rajma rice.jpeg"
+         alt="Rajma Rice"
+         onclick="addToCart('Rajma Rice', 165)"
+         class="food-img">
+
+    <div class="food-info">
+        <h2>Rajma Rice</h2>
+        <span class="rating">4.5⭐</span>
+    </div>
+
+    <div class="price">
+        <i>Price:</i> ₹165 For one
+    </div>
+</div>
+
+<!-- 16 -->
+<div class="rice_item">
+    <img src="lunch/spl punjabi kadi pakoda.jpeg"
+         alt="Punjabi Kadi Rice"
+         onclick="addToCart('Punjabi Kadi Rice', 145)"
+         class="food-img">
+
+    <div class="food-info">
+        <h2>Punjabi Kadi Rice</h2>
+        <span class="rating">4.5⭐</span>
+    </div>
+
+    <div class="price">
+        <i>Price:</i> ₹145 For one
+    </div>
+</div>
+
+<!-- 17 -->
+<div class="rice_item">
+    <img src="lunch/kaju rice.jpg"
+         alt="Mushroom Biryani"
+         onclick="addToCart('Mushroom Biryani', 185)"
+         class="food-img">
+
+    <div class="food-info">
+        <h2>Kaju Rice</h2>
+        <span class="rating">4.6⭐</span>
+    </div>
+
+    <div class="price">
+        <i>Price:</i> ₹185 For one
+    </div>
+</div>
+
+<!-- 18 -->
+<div class="rice_item">
+    <img src="lunch/kashmari pulao.jpeg"
+         alt="Veg Fried Rice"
+         onclick="addToCart('Veg Fried Rice', 155)"
+         class="food-img">
+
+    <div class="food-info">
+        <h2>Kashmari Pulao </h2>
+        <span class="rating">4.4⭐</span>
+    </div>
+
+    <div class="price">
+        <i>Price:</i> ₹155 For one
+    </div>
+</div>
+
+<!-- 19 -->
+<div class="rice_item">
+    <img src="lunch/paneer tikka palao.jpeg"
+         alt="Paneer Fried Rice"
+         onclick="addToCart('Paneer Fried Rice', 185)"
+         class="food-img">
+
+    <div class="food-info">
+        <h2>Paneer Tikka Palao</h2>
+        <span class="rating">4.7⭐</span>
+    </div>
+
+    <div class="price">
+        <i>Price:</i> ₹185 For one
+    </div>
+</div>
+
+<!-- 20 -->
+<div class="rice_item">
+    <img src="lunch/khichidi.jpg"
+         alt="Schezwan Rice"
+         onclick="addToCart('Schezwan Rice', 175)"
+         class="food-img">
+
+    <div class="food-info">
+        <h2>Khichidi </h2>
+        <span class="rating">4.5⭐</span>
+    </div>
+
+    <div class="price">
+        <i>Price:</i> ₹175 For one
+    </div>
+</div>
+
+    </div>
+
+</div>
+
+</div> <br><br>
+
+            <div class="snacks" id="snacks">
+
+    <p class="section-title"><b>Snacks</b></p>
+
+    <div class="snacks_food" id="resto4">
+
+        <!-- 1 -->
+        <div class="snacks_item">
+            <img src="lunch/Samosas.webp"
+                 alt="Samosa"
+                 onclick="addToCart('Samosa', 20)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Samosa</h2>
+                <span class="rating">4.6⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹20 For one
+            </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="snacks_item">
+            <img src="lunch/pani puri.jpeg"
+                 alt="Paani Puri"
+                 onclick="addToCart('Paani Puri', 25)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Paani Puri</h2>
+                <span class="rating">4.8⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹25 Per Plate
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="snacks_item">
+            <img src="lunch/finger chips.jpg"
+                 alt="Finger Chips"
+                 onclick="addToCart('Finger Chips', 135)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Finger Chips</h2>
+                <span class="rating">4.6⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹135 For one
+            </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="snacks_item">
+            <img src="lunch/spring rolls.jpeg"
+                 alt="Spring Rolls"
+                 onclick="addToCart('Spring Rolls', 150)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Spring Rolls</h2>
+                <span class="rating">4.4⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹150 For one
+            </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="snacks_item">
+            <img src="lunch/Aloo-65.jpg"
+                 alt="Alu 65"
+                 onclick="addToCart('Alu-65', 145)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Alu-65</h2>
+                <span class="rating">4.4⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹145 For one
+            </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="snacks_item">
+            <img src="lunch/paneer65.jpeg"
+                 alt="Paneer 65"
+                 onclick="addToCart('Paneer-65', 195)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Paneer-65</h2>
+                <span class="rating">4.4⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹195 For one
+            </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="snacks_item">
+            <img src="lunch/gobi65.jpeg"
+                 alt="Gobi 65"
+                 onclick="addToCart('Gobi-65', 90)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Gobi-65</h2>
+                <span class="rating">4.5⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹90 For one
+            </div>
+        </div>
+
+        <!-- 8 -->
+        <div class="snacks_item">
+            <img src="lunch/gobi manchuriam.jpeg"
+                 alt="Gobi Manchurian"
+                 onclick="addToCart('Gobi Manchurian', 100)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Gobi Manchurian</h2>
+                <span class="rating">4.4⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹100 For one
+            </div>
+        </div>
+
+        <!-- 9 -->
+        <div class="snacks_item">
+            <img src="lunch/babycorn65.jpeg"
+                 alt="Baby Corn-65"
+                 onclick="addToCart('Baby Corn-65', 190)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Baby Corn-65</h2>
+                <span class="rating">4.6⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹190 For one
+            </div>
+        </div>
+
+        <!-- 10 -->
+        <div class="snacks_item">
+            <img src="lunch/soya 655.jpeg"
+                 alt="Soya-65"
+                 onclick="addToCart('Soya-65', 145)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Soya-65</h2>
+                <span class="rating">4.4⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹145 For one
+            </div>
+        </div>
+
+        <!-- 11 -->
+        <div class="snacks_item">
+            <img src="lunch/Paneer-Tikka-dry.jpg"
+                 alt="Paneer Tikka Dry"
+                 onclick="addToCart('Paneer Tikka Dry', 190)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Paneer Tikka Dry</h2>
+                <span class="rating">4.4⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹190 For one
+            </div>
+        </div>
+
+        <!-- 12 -->
+        <div class="snacks_item">
+            <img src="lunch/GOBI-CHILLY-Dry.jpg"
+                 alt="Gobi Chilly Dry"
+                 onclick="addToCart('Gobi Chilly Dry', 145)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Gobi Chilly Dry</h2>
+                <span class="rating">4.2⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹145 For one
+            </div>
+        </div>
+
+        <!-- 13 -->
+        <div class="snacks_item">
+            <img src="lunch/chilly paneer dry.jpeg"
+                 alt="Chilly Paneer Dry"
+                 onclick="addToCart('Chilly Paneer Dry', 195)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Chilly Paneer Dry</h2>
+                <span class="rating">4.4⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹195 For one
+            </div>
+        </div>
+
+        <!-- 14 -->
+        <div class="snacks_item">
+            <img src="lunch/kachori.jpeg"
+                 alt="Kachori"
+                 onclick="addToCart('Kachori', 30)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Kachori</h2>
+                <span class="rating">4.7⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹30 For one
+            </div>
+        </div>
+
+        <!-- 15 -->
+        <div class="snacks_item">
+            <img src="lunch/vada pav.jpeg"
+                 alt="Vada Pav"
+                 onclick="addToCart('Vada Pav', 30)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Vada Pav</h2>
+                <span class="rating">4.7⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹30 For one
+            </div>
+        </div>
+
+        <!-- 16 -->
+        <div class="snacks_item">
+            <img src="lunch/pav bhaji.jpg"
+                 alt="Pav Bhaji"
+                 onclick="addToCart('Pav Bhaji', 80)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Pav Bhaji</h2>
+                <span class="rating">4.5⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹80 For one
+            </div>
+        </div>
+        
+        <!-- 17 -->
+<div class="snacks_item">
+    <img src="lunch/masala papd.jpeg"
+         alt="Masala Papad"
+         onclick="addToCart('Masala Papad', 35)"
+         class="food-img">
+
+    <div class="food-info">
+        <h2>Masala Papad</h2>
+        <span class="rating">4.6⭐</span>
+    </div>
+
+    <div class="price">
+        <i>Price:</i> ₹35 For one
+    </div>
+</div>
+
+<!-- 18 -->
+<div class="snacks_item">
+    <img src="lunch/cut-mirchi-bajji.jpg"
+         alt="Cut Mirchi Bhajji"
+         onclick="addToCart('Cut Mirchi Bhajji', 50)"
+         class="food-img">
+
+    <div class="food-info">
+        <h2>Cut Mirchi Bhajji</h2>
+        <span class="rating">4.4⭐</span>
+    </div>
+
+    <div class="price">
+        <i>Price:</i> ₹50 For one
+    </div>
+</div>
+
+<!-- 19 -->
+<div class="snacks_item">
+    <img src="lunch/break pakoda.JPG"
+         alt="Bread Pakoda"
+         onclick="addToCart('Bread Pakoda', 50)"
+         class="food-img">
+
+    <div class="food-info">
+        <h2>Bread Pakoda</h2>
+        <span class="rating">4.4⭐</span>
+    </div>
+
+    <div class="price">
+        <i>Price:</i> ₹50 For one
+    </div>
+</div>
+
+<!-- 20 -->
+<div class="snacks_item">
+    <img src="lunch/maggi.jpg"
+         alt="Maggi"
+         onclick="addToCart('Maggi', 50)"
+         class="food-img">
+
+    <div class="food-info">
+        <h2>Maggi</h2>
+        <span class="rating">4.4⭐</span>
+    </div>
+
+    <div class="price">
+        <i>Price:</i> ₹50 For one
+    </div>
+</div>
+
+    </div>
+
+</div>
+        <br><br>
+
+        <div class="sweet" id="sweets">
+
+    <p class="section-title"><b>Sweets</b></p>
+
+    <div class="sweet_food" id="resto5">
+
+        <!-- 1 -->
+        <div class="sweet_item">
+            <img src="sweets/spl kandi peda.avif"
+                 alt="Kandi Peda"
+                 onclick="addToCart('Kandi Peda', 120)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Kandi Peda</h2>
+                <span class="rating">4.6⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹120 For 250 gms
+            </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="sweet_item">
+            <img src="sweets/milk peda.jpeg"
+                 alt="Milk Peda"
+                 onclick="addToCart('Milk Peda', 125)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Milk Peda</h2>
+                <span class="rating">4.8⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹125 For 250 gms
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="sweet_item">
+            <img src="sweets/dharwad peda.jpeg"
+                 alt="Dharwad Peda"
+                 onclick="addToCart('Dharwad Peda', 150)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Dharwad Peda</h2>
+                <span class="rating">4.6⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹150 For 250 gms
+            </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="sweet_item">
+            <img src="sweets/motichoor-laddu.avif"
+                 alt="Motichoor Laddu"
+                 onclick="addToCart('Motichoor Laddu', 130)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Motichoor Laddu</h2>
+                <span class="rating">4.4⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹130 For 250 gms
+            </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="sweet_item">
+            <img src="sweets/mysore pak.jpeg"
+                 alt="Mysore Pak"
+                 onclick="addToCart('Mysore Pak', 110)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Mysore Pak</h2>
+                <span class="rating">4.4⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹110 For 250 gms
+            </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="sweet_item">
+            <img src="sweets/coconut barfi.jpeg"
+                 alt="Coconut Barfi"
+                 onclick="addToCart('Coconut Barfi', 115)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Coconut Barfi</h2>
+                <span class="rating">4.4⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹115 For 250 gms
+            </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="sweet_item">
+            <img src="sweets/pista barfi.jpg"
+                 alt="Pista Barfi"
+                 onclick="addToCart('Pista Barfi', 120)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Pista Barfi</h2>
+                <span class="rating">4.5⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹120 For 250 gms
+            </div>
+        </div>
+
+        <!-- 8 -->
+        <div class="sweet_item">
+            <img src="sweets/mawa malpuri.jpg"
+                 alt="Mawa Malpuri"
+                 onclick="addToCart('Mawa Malpuri', 45)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Mawa Malpuri</h2>
+                <span class="rating">4.4⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹45 For one piece
+            </div>
+        </div>
+
+        <!-- 9 -->
+        <div class="sweet_item">
+            <img src="sweets/gulab jamun.jpeg"
+                 alt="Gulab Jamun"
+                 onclick="addToCart('Gulab Jamun', 35)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Gulab Jamun</h2>
+                <span class="rating">4.7⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹35 For one piece
+            </div>
+        </div>
+
+        <!-- 10 -->
+        <div class="sweet_item">
+            <img src="images/kaju.gif"
+                 alt="Kaju Katli"
+                 onclick="addToCart('Kaju Katli', 200)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Kaju Katli</h2>
+                <span class="rating">4.5⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹200 For 200 gms
+            </div>
+        </div>
+
+        <!-- 11 -->
+        <div class="sweet_item">
+            <img src="sweets/bombay halwa.jpeg"
+                 alt="Bombay Halwa"
+                 onclick="addToCart('Bombay Halwa', 100)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Bombay Halwa</h2>
+                <span class="rating">4.4⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹100 For 250 gms
+            </div>
+        </div>
+
+        <!-- 12 -->
+        <div class="sweet_item">
+            <img src="sweets/basundi.jpeg"
+                 alt="Basundi"
+                 onclick="addToCart('Basundi', 120)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Basundi</h2>
+                <span class="rating">4.6⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹120 For one cup
+            </div>
+        </div>
+        
+        <!-- 13 -->
+<div class="sweet_item">
+    <img src="sweets/kalakand.jpg"
+         alt="Kalakand"
+         onclick="addToCart('Kalakand', 160)"
+         class="food-img">
+
+    <div class="food-info">
+        <h2>Kalakand</h2>
+        <span class="rating">4.7⭐</span>
+    </div>
+
+    <div class="price">
+        <i>Price:</i> ₹160 For 250 gms
+    </div>
+</div>
+
+<!-- 14 -->
+<div class="sweet_item">
+    <img src="sweets/jalebi.jpeg"
+         alt="Jalebi"
+         onclick="addToCart('Jalebi', 80)"
+         class="food-img">
+
+    <div class="food-info">
+        <h2>Jalebi</h2>
+        <span class="rating">4.6⭐</span>
+    </div>
+
+    <div class="price">
+        <i>Price:</i> ₹80 For 250 gms
+    </div>
+</div>
+
+<!-- 15 -->
+<div class="sweet_item">
+    <img src="sweets/rabdi.jpg"
+         alt="Rabdi"
+         onclick="addToCart('Rabdi', 120)"
+         class="food-img">
+
+    <div class="food-info">
+        <h2>Rabdi</h2>
+        <span class="rating">4.7⭐</span>
+    </div>
+
+    <div class="price">
+        <i>Price:</i> ₹120 For one cup
+    </div>
+</div>
+
+<!-- 16 -->
+<div class="sweet_item">
+    <img src="sweets/rasmalai.jpeg"
+         alt="Rasmalai"
+         onclick="addToCart('Rasmalai', 180)"
+         class="food-img">
+
+    <div class="food-info">
+        <h2>Rasmalai</h2>
+        <span class="rating">4.5⭐</span>
+    </div>
+
+    <div class="price">
+        <i>Price:</i> ₹180 For one piece
+    </div>
+</div>
+
+<!-- 17 -->
+<div class="sweet_item">
+    <img src="sweets/rasgulla.jpg"
+         alt="Rasgulla"
+         onclick="addToCart('Rasgulla', 30)"
+         class="food-img">
+
+    <div class="food-info">
+        <h2>Rasgulla</h2>
+        <span class="rating">4.6⭐</span>
+    </div>
+
+    <div class="price">
+        <i>Price:</i> ₹30 For one piece
+    </div>
+</div>
+
+<!-- 18 -->
+<div class="sweet_item">
+    <img src="sweets/spl dink laddu.jpg"
+         alt="Spl Dink Laddu"
+         onclick="addToCart('Spl Dink Laddu', 150)"
+         class="food-img">
+
+    <div class="food-info">
+        <h2>Spl Dink Laddu</h2>
+        <span class="rating">4.4⭐</span>
+    </div>
+
+    <div class="price">
+        <i>Price:</i> ₹150 For 200 gms
+    </div>
+</div>
+
+<!-- 19 -->
+<div class="sweet_item">
+    <img src="sweets/Sweet-Balushahi.jpg"
+         alt="Balushahi"
+         onclick="addToCart('Balushahi', 100)"
+         class="food-img">
+
+    <div class="food-info">
+        <h2>Balushahi</h2>
+        <span class="rating">4.4⭐</span>
+    </div>
+
+    <div class="price">
+        <i>Price:</i> ₹100 For 250 gms
+    </div>
+</div>
+
+<!-- 20 -->
+<div class="sweet_item">
+    <img src="sweets/mix.jpg"
+         alt="Mix Peda"
+         onclick="addToCart('Mix Peda', 150)"
+         class="food-img">
+
+    <div class="food-info">
+        <h2>Mix Peda</h2>
+        <span class="rating">4.4⭐</span>
+    </div>
+
+    <div class="price">
+        <i>Price:</i> ₹150 For 250 gms
+    </div>
+</div>
+
+    </div>
+
+</div>
+    <br><br>
+
+    <div class="pizza" id="pab">
+
+    <p class="section-title"><b>Pizza & Burger</b></p>
+
+    <div class="pizza_food" id="resto6">
+
+        <!-- 1 -->
+        <div class="pizza_item">
+            <img src="lunch/veggiess pizza.jpg"
+                 alt="Veggies Pizza"
+                 onclick="addToCart('Vaggiess Pizza', 249)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Vaggiess Pizza</h2>
+                <span class="rating">4.5⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹249 For one
+            </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="pizza_item">
+            <img src="lunch/corn pizza.avif"
+                 alt="Corn Pizza"
+                 onclick="addToCart('Corn Pizza', 199)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Corn Pizza</h2>
+                <span class="rating">4.5⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹199 For one
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="pizza_item">
+            <img src="lunch/margherita-pizza.jpg"
+                 alt="Margherita Pizza"
+                 onclick="addToCart('Margherita Pizza', 249)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Margherita Pizza</h2>
+                <span class="rating">4.5⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹249 For one
+            </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="pizza_item">
+            <img src="lunch/peppy paneer pizza loaded.jpg"
+                 alt="Peppy Paneer Pizza"
+                 onclick="addToCart('Peppy Paneer Pizza', 299)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Peppy Paneer Pizza</h2>
+                <span class="rating">4.4⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹299 For one
+            </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="pizza_item">
+            <img src="lunch/cheese volcano pizza.avif"
+                 alt="Volcano Pizza"
+                 onclick="addToCart('Volcano Pizza', 299)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Volcano Pizza</h2>
+                <span class="rating">4.4⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹299 For one
+            </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="pizza_item">
+            <img src="sweets/veg combo.avif"
+                 alt="Veg Combo"
+                 onclick="addToCart('Classical Veg Combo', 249)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Classical Veg Combo</h2>
+                <span class="rating">4.4⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹249 For one
+            </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="pizza_item">
+            <img src="sweets/maharaja combo.avif"
+                 alt="Maharaja Combo"
+                 onclick="addToCart('Spl Maharaja Combo', 400)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Spl Maharaja Combo</h2>
+                <span class="rating">4.5⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹400 For one
+            </div>
+        </div>
+
+        <!-- 8 -->
+        <div class="pizza_item">
+            <img src="sweets/tandoori pizza.png"
+                 alt="Tandoori Pizza"
+                 onclick="addToCart('Tandoori Paneer Pizza', 249)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Tandoori Paneer Pizza</h2>
+                <span class="rating">4.4⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹249 For one
+            </div>
+        </div>
+
+        <!-- 9 -->
+        <div class="pizza_item">
+            <img src="sweets/combo.avif"
+                 alt="Spl Combo"
+                 onclick="addToCart('Paneer & Double Cheese', 299)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Paneer & Double Cheese</h2>
+                <span class="rating">4.7⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹299 For one
+            </div>
+        </div>
+
+        <!-- 10 -->
+        <div class="pizza_item">
+            <img src="lunch/veg snacker burger 140.avif"
+                 alt="Veg Snacker Burger"
+                 onclick="addToCart('Veg Snacker Burger', 140)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Veg Snacker Burger</h2>
+                <span class="rating">4.5⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹140 For one
+            </div>
+        </div>
+
+        <!-- 11 -->
+        <div class="pizza_item">
+            <img src="lunch/mighty cheese burger 250.avif"
+                 alt="Cheese Burger"
+                 onclick="addToCart('Cheese Burger', 250)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Cheese Burger</h2>
+                <span class="rating">4.4⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹250 For one
+            </div>
+        </div>
+
+        <!-- 12 -->
+        <div class="pizza_item">
+            <img src="lunch/tandoori paneer burger rs 260.avif"
+                 alt="Tandoori Burger"
+                 onclick="addToCart('Tandoori Paneer Burger', 260)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Tandoori Paneer Burger</h2>
+                <span class="rating">4.6⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹260 For one
+            </div>
+        </div>
+
+        <!-- 13 -->
+        <div class="pizza_item">
+            <img src="lunch/cheese chili lava burger 190.avif"
+                 alt="Cheese Chilly Burger"
+                 onclick="addToCart('Cheese Chilly Burger', 199)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Cheese Chilly Burger</h2>
+                <span class="rating">4.7⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹199 For one
+            </div>
+        </div>
+
+        <!-- 14 -->
+        <div class="pizza_item">
+            <img src="lunch/alu tikki.jpeg"
+                 alt="Alu Tikki Burger"
+                 onclick="addToCart('Alu Tikki Burger', 159)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Alu Tikki Burger</h2>
+                <span class="rating">4.6⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹159 For one
+            </div>
+        </div>
+
+        <!-- 15 -->
+        <div class="pizza_item">
+            <img src="lunch/combo.jpg"
+                 alt="Cheese Combo Burger"
+                 onclick="addToCart('Cheese Combo Burger', 259)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Cheese Combo Burger</h2>
+                <span class="rating">4.7⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹259 For one
+            </div>
+        </div>
+
+        <!-- 16 -->
+        <div class="pizza_item">
+            <img src="lunch/bombay-grilled-sandwich.jpg"
+                 alt="Spl Bombay Sandwich"
+                 onclick="addToCart('Spl Bombay Sandwich', 259)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Spl Bombay Sandwich</h2>
+                <span class="rating">4.5⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹259 For one
+            </div>
+        </div>
+
+        <!-- 17 -->
+        <div class="pizza_item">
+            <img src="lunch/vegi sand.jpeg"
+                 alt="Vegetable Sandwich"
+                 onclick="addToCart('Vegetable Sandwich', 99)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Vegetable Sandwich</h2>
+                <span class="rating">4.6⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹99 For one
+            </div>
+        </div>
+
+        <!-- 18 -->
+        <div class="pizza_item">
+            <img src="lunch/paneer sand.jpeg"
+                 alt="Paneer Sandwich"
+                 onclick="addToCart('Paneer Sandwich', 259)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Paneer Sandwich</h2>
+                <span class="rating">4.4⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹259 For one
+            </div>
+        </div>
+
+        <!-- 19 -->
+        <div class="pizza_item">
+            <img src="lunch/spicy potato sand.jpg"
+                 alt="Potato Sandwich"
+                 onclick="addToCart('Potato Sandwich', 159)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Potato Sandwich</h2>
+                <span class="rating">4.4⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹159 For one
+            </div>
+        </div>
+
+        <!-- 20 -->
+        <div class="pizza_item">
+            <img src="lunch/classic veg sand.webp"
+                 alt="Classical Sandwich"
+                 onclick="addToCart('Classical Sandwich', 159)"
+                 class="food-img">
+
+            <div class="food-info">
+                <h2>Classical Sandwich</h2>
+                <span class="rating">4.4⭐</span>
+            </div>
+
+            <div class="price">
+                <i>Price:</i> ₹159 For one
+            </div>
+        </div>
+
+    </div>
+
+</div>
+    <br><br>
+
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("sidebar").classList.toggle("active");
+        }
+
+        function flipCard(card) {
+            card.classList.toggle("flipped");
+        }
+
+        function updateQuantity(change, event) {
+            event.stopPropagation(); // Prevent flipping on button click
+            let quantityElem = event.target.parentElement.querySelector(".quantity-value");
+            let newQuantity = Math.max(1, parseInt(quantityElem.textContent) + change);
+            quantityElem.textContent = newQuantity;
+        }
+
+        function addToCart(event) {
+            event.stopPropagation(); // Prevent flipping on button click
+            let quantity = event.target.previousElementSibling.querySelector(".quantity-value").textContent;
+            let cart = document.getElementById("cart-items");
+            let newItem = document.createElement("li");
+            newItem.textContent = `Food Item - ${quantity} pcs`;
+            cart.appendChild(newItem);
+        }
+
+        
+        
+    </script>
+    <script>
+  function addToCart(name, price) {
+    let cartItems = JSON.parse(localStorage.getItem("thaliItems")) || [];
+
+    const existing = cartItems.find(i => i.name === name);
+    if (existing) {
+      existing.qty += 1;
+      existing.totalPrice = existing.qty * existing.price;
+    } else {
+      cartItems.push({ name, price, qty: 1, totalPrice: price });
+    }
+
+    localStorage.setItem("thaliItems", JSON.stringify(cartItems));
+
+    // Optional: Navigate to the cart page
+    alert(`${name} added to your thali!`);
+    // Or directly go to cart
+    // window.location.href = "cart.html";
+  }
+</script>
+  <script>
+function toggleTheme() {
+      document.body.classList.toggle("dark-mode");
+    }
+    </script>
+    <footer class="gov-footer">
+  <div class="footer-top">
+    <a href="#">Copyright Policy</a> /
+    <a href="#">Privacy Policy</a> /
+    <a href="#">Hyperlink Policy</a> /
+    <a href="#">Terms and Conditions</a> /
+    <a href="#">Help</a>
+  </div>
+
+  <div class="footer-content">
+    <p>
+      Content Owned and Maintained by <strong>Swad Ghar Ka</strong><br>
+      Designed, Developed by <a href="#"><strong>Samarth</strong></a><br>
+      <span style="color: #ccc;">Inspired by</span> Modern Indian Hospitality & Cuisine Culture<br>
+      <strong>Last Updated:</strong> July 25, 2025
+    </p>
+
+    
+  </div>
+</footer>
+<div id="popup" class="popup">
+  <div class="popup-content">
+    <span class="close-btn">&times;</span>
+    <h2>Welcome to Spice Delight! 🍛</h2>
+    <p>Click on the Thali to make a customizable Thali 🥗 & <br>Don't miss to click on the Rush Hours Great deals are waiting for you.🔥🎁<br>To select the item Click on the particular image</p>
+  </div>
+</div>
+
+<div id="popupp" class="popupp">
+  <div class="popupp-content">
+    <span class="close-butn">&times;</span>
+    <h2>Welcome to Spice Delight! 🍛</h2>
+<p><a href="mess.html">Click here for the students for the daily Food(Mess)</a></p>
+  </div>
+</div>
+
+
+<script>
+  window.onload = function () {
+    const popup = document.getElementById("popupp");
+    const closeBtn = document.querySelector(".close-butn");
+
+    // Check if popup was already shown
+    const hasVisited = sessionStorage.getItem("hasVisited");
+
+    if (!hasVisited) {
+      // Show the popup after 3 seconds
+      setTimeout(() => {
+        popup.style.display = "block";
+        sessionStorage.setItem("hasVisited", "true"); // Mark as shown
+      }, 10000);
+    }
+
+    // Close on clicking X
+    closeBtn.onclick = () => popup.style.display = "none";
+
+    // Close on clicking outside
+    window.onclick = function (event) {
+      if (event.target === popup) {
+        popup.style.display = "none";
+      }
+    };
+  };
+</script>
+
+
+<script>
+  window.onload = function () {
+    const popup = document.getElementById("popup");
+    const closeBtn = document.querySelector(".close-btn");
+
+    // Check if popup was already shown
+    const hasVisited = sessionStorage.getItem("hasVisited");
+
+    if (!hasVisited) {
+      // Show the popup after 3 seconds
+      setTimeout(() => {
+        popup.style.display = "block";
+        sessionStorage.setItem("hasVisited", "true"); // Mark as shown
+      }, 3000);
+    }
+
+    // Close on clicking X
+    closeBtn.onclick = () => popup.style.display = "none";
+
+    // Close on clicking outside
+    window.onclick = function (event) {
+      if (event.target === popup) {
+        popup.style.display = "none";
+      }
+    };
+  };
+  
+//SHOW BUTTON WHEN SCROLLING DOWN
+ // SHOW BUTTON ON SCROLL
+window.onscroll = function () {
+
+    let btn = document.getElementById("topBtn");
+
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        btn.style.display = "block";
+    } 
+    else {
+        btn.style.display = "none";
+    }
+};
+
+// SCROLL TO TOP
+function scrollToTop() {
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+}
+  
+</script>
+
+<script src="api.js"></script>
+<!-- GO TO TOP BUTTON -->
+<!-- BACK TO TOP BUTTON -->
+<button id="topBtn" onclick="scrollToTop()">
+    ▲
+</button>
+<!-- ================================================ --> <!-- BACKEND API INTEGRATION - Add before </body> --> <!-- ================================================ --> <!-- Step A: Load the api.js file you copied --> <script src="api.js"></script> <script> // ============================================ // 1. SHOW LOGIN STATUS IN HEADER // Checks if user is logged in and shows name // ============================================ function updateHeaderLoginStatus() { const name = localStorage.getItem("sgk_name"); const headerDiv = document.querySelector(".head"); if (name && headerDiv) { const loginDiv = document.createElement("div"); loginDiv.className = "links"; loginDiv.innerHTML = ` <span style="color:green;font-weight:bold;"> 👤 ${name} </span> <a href="#" onclick="logoutUser()" style="color:red;margin-left:8px;"> Logout </a> `; headerDiv.appendChild(loginDiv); } } // ============================================ // 2. SAVE CART TO BACKEND WHEN CHECKING OUT // Runs when user clicks the cart icon // ============================================ async function goToCart() { const cartItems = JSON.parse(localStorage.getItem("thaliItems")) || []; if (cartItems.length === 0) { window.location.href = "orderdet.html"; return; } // If user is logged in, also sync cart to backend const email = localStorage.getItem("sgk_email"); if (email) { const total = cartItems.reduce((sum, i) => sum + i.totalPrice, 0); await placeOrder({ customerName: localStorage.getItem("sgk_name"), customerEmail: email, items: JSON.stringify(cartItems), totalAmount: total }); } window.location.href = "orderdet.html"; } // ============================================ // 3. SHOW CART ITEM COUNT ON THE CART ICON // ============================================ function updateCartCount() { const items = JSON.parse(localStorage.getItem("thaliItems")) || []; const count = items.reduce((s, i) => s + i.qty, 0); let badge = document.getElementById("cartBadge"); if (!badge) { badge = document.createElement("span"); badge.id = "cartBadge"; badge.style = "background:red;color:white;border-radius:50%;padding:2px 6px;font-size:11px;position:absolute;top:-4px;right:-4px;"; const cartLink = document.querySelector("a[href='orderdet.html']"); if (cartLink) { cartLink.style.position = "relative"; cartLink.appendChild(badge); } } badge.textContent = count > 0 ? count : ""; } // ============================================ // 4. OVERRIDE addToCart TO ALSO UPDATE BADGE // (your existing addToCart already saves to // localStorage — we just add badge update) // ============================================ const _originalAddToCart = window.addToCart; window.addToCart = function(name, price) { _originalAddToCart(name, price); // runs your existing code updateCartCount(); // also update the badge }; // ============================================ // 5. RUN ON PAGE LOAD // ============================================ document.addEventListener("DOMContentLoaded", function() { updateHeaderLoginStatus(); // show "👤 Samarth" if logged in updateCartCount(); // show red badge on cart icon }); </script> <!-- ================================================ --> <!-- END OF INTEGRATION --> <!-- ================================================ --> </body> <!-- ← YOUR ORIGINAL CLOSING TAG (keep this) -->
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Swad Ghar Ka | Premium Deals</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at top, #1e293b, #020617);
+      color: white;
+      padding: 2rem;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+      text-align: center;
+      opacity: 0.7;
+      margin-bottom: 2.5rem;
+    }
+
+    .deals-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .deal-card {
+      position: relative;
+      padding: 1.6rem;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      backdrop-filter: blur(14px);
+      transition: all 0.3s ease;
+      overflow: hidden;
+    }
+
+    .deal-card:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    }
+
+    /* FIX: allow clicks */
+    .deal-card::before {
+      content: '';
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      top: -50%;
+      left: -50%;
+      background: linear-gradient(45deg, transparent, rgba(255,255,255,0.15), transparent);
+      transform: rotate(25deg);
+      opacity: 0;
+      transition: 0.5s;
+      pointer-events: none;
+    }
+
+    .deal-card:hover::before {
+      opacity: 1;
+    }
+
+    .highlight {
+      background: linear-gradient(135deg, #f59e0b, #ef4444);
+    }
+
+    .premium {
+      background: linear-gradient(135deg, #10b981, #059669);
+    }
+
+    .badge {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 0.7rem;
+      font-weight: bold;
+    }
+
+    .red { background: #ef4444; }
+    .blue { background: #3b82f6; }
+    .green { background: #22c55e; }
+    .gold { background: #facc15; color: black; }
+
+    .deal-card h2 {
+      margin-top: 25px;
+      margin-bottom: 8px;
+    }
+
+    .deal-card p {
+      opacity: 0.85;
+      margin-bottom: 10px;
+      font-size: 0.95rem;
+    }
+
+    .timer {
+      font-size: 0.9rem;
+      color: #facc15;
+      margin-bottom: 12px;
+    }
+
+    /* Button style */
+    .order-btn {
+      display: inline-block;
+      background: white;
+      color: black;
+      padding: 8px 14px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+
+    .order-btn:hover {
+      background: #facc15;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>🔥 Today’s Best Deals</h1>
+    <p class="subtitle">Limited-time offers crafted for you</p>
+
+    <div class="deals-grid">
+
+      <!-- Thali -->
+      <div class="deal-card highlight">
+        <span class="badge red">🔥 Trending</span>
+        <h2>20% OFF Thali</h2>
+        <p>Lunch Special • 12PM – 3PM</p>
+        <div class="timer" data-time="180"></div>
+        <a href="thali.html" class="order-btn">Order Now</a>
+      </div>
+
+      <!-- Lunch -->
+      <div class="deal-card">
+        <span class="badge blue">Limited</span>
+        <h2>Buy 2 Get 1 FREE</h2>
+        <p>Dinner Special • 7PM – 10PM</p>
+        <div class="timer" data-time="240"></div>
+        <a href="home.html#lunch" class="order-btn">Grab Deal</a>
+      </div>
+
+      <!-- Delivery -->
+      <div class="deal-card">
+        <span class="badge green">Popular</span>
+        <h2>Free Delivery</h2>
+        <p>On orders above ₹299</p>
+        <div class="timer" data-time="300"></div>
+        <a href="home.html" class="order-btn">Order Now</a>
+      </div>
+
+      <!-- Pizza -->
+      <div class="deal-card premium">
+        <span class="badge gold">Premium</span>
+        <h2>Combo Pizza @ ₹299</h2>
+        <p>Student Special</p>
+        <div class="timer" data-time="200"></div>
+        <a href="home.html#pab" class="order-btn">Try Now</a>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    const timers = document.querySelectorAll(".timer");
+
+    timers.forEach(timer => {
+      let time = timer.getAttribute("data-time") * 60;
+
+      function updateTimer() {
+        let minutes = Math.floor(time / 60);
+        let seconds = time % 60;
+
+        timer.textContent =
+          "⏳ Ends in " +
+          minutes + ":" +
+          (seconds < 10 ? "0" : "") + seconds;
+
+        if (time > 0) time--;
+      }
+
+      setInterval(updateTimer, 1000);
+      updateTimer();
+    });
+  </script>
+<script src="api.js"></script> <script> async function handleOrder() { const result = await placeOrder({ customerName: document.getElementById("name").value, customerEmail: document.getElementById("email").value, customerPhone: document.getElementById("phone").value, items: JSON.stringify(getCartItems()), // your existing cart totalAmount: getCartTotal() }); alert(result.message); } </script>
+</body>
+</html>
