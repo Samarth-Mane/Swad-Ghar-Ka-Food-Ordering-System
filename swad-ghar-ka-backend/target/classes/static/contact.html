@@ -1,289 +1,640 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Swad Ghar Ka - By Samarth Mane | Contact Me</title>
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0"/>
+
+  <title>
+    Swad Ghar Ka | Contact Me
+  </title>
+
+  <!-- ICONS -->
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
   <style>
-    :root {
-      --primary: #3b82f6;
-      --text: #1f2937;
-      --background: #f0f4f8;
-      --card-bg: rgba(255, 255, 255, 0.75);
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', sans-serif;
+    body{
+
+      min-height:100vh;
+      background:
+      linear-gradient(
+      135deg,
+      #fff4eb,
+      #ffe4d1,
+      #fff7f0
+      );
+
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:40px 20px;
+      overflow-x:hidden;
     }
 
-    body {
-      background: var(--background);
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 2rem;
+    /* =========================
+       MAIN CONTAINER
+    ========================= */
+
+    .contact-container{
+
+      width:100%;
+      max-width:1200px;
+      background:white;
+      border-radius:35px;
+      overflow:hidden;
+
+      display:flex;
+      flex-wrap:wrap;
+
+      box-shadow:
+      0 20px 60px rgba(0,0,0,0.12);
+
+      position:relative;
     }
 
-    .container {
-      width: 100%;
-      max-width: 960px;
-      background: var(--card-bg);
-      backdrop-filter: blur(10px);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-      border-radius: 16px;
-      display: flex;
-      flex-wrap: wrap;
-      overflow: hidden;
+    /* =========================
+       LEFT SECTION
+    ========================= */
+
+    .contact-left{
+
+      flex:1 1 420px;
+
+      background:
+      linear-gradient(
+      135deg,
+      #ff5e00,
+      #ff9100
+      );
+
+      color:white;
+
+      padding:60px 45px;
+      position:relative;
+      overflow:hidden;
     }
 
-    .left,
-    .right {
-      flex: 1 1 300px;
-      padding: 2rem;
+    /* GLOW EFFECTS */
+
+    .contact-left::before{
+
+      content:"";
+
+      position:absolute;
+
+      width:320px;
+      height:320px;
+
+      background:rgba(255,255,255,0.08);
+
+      border-radius:50%;
+
+      top:-90px;
+      right:-90px;
     }
 
-    h2 {
-      font-size: 2rem;
-      color: var(--text);
-      margin-bottom: 1.5rem;
+    .contact-left::after{
+
+      content:"";
+
+      position:absolute;
+
+      width:220px;
+      height:220px;
+
+      background:rgba(255,255,255,0.07);
+
+      border-radius:50%;
+
+      bottom:-70px;
+      left:-70px;
     }
 
-    .info p {
-      font-size: 1.1rem;
-      margin: 1rem 0;
+    .left-content{
+      position:relative;
+      z-index:2;
     }
 
-    .info a {
-      color: var(--primary);
-      text-decoration: none;
+    .contact-left h1{
+
+      font-size:3rem;
+      line-height:1.2;
+      margin-bottom:20px;
+      font-weight:800;
     }
 
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
+    .contact-left p{
+
+      color:rgba(255,255,255,0.9);
+      line-height:1.9;
+      margin-bottom:35px;
+      font-size:1rem;
+    }
+
+    /* =========================
+       CONTACT CARDS
+    ========================= */
+
+    .contact-info{
+
+      display:flex;
+      flex-direction:column;
+      gap:18px;
+    }
+
+    .info-box{
+
+      display:flex;
+      align-items:center;
+      gap:18px;
+
+      background:rgba(255,255,255,0.12);
+
+      padding:18px;
+      border-radius:18px;
+
+      backdrop-filter:blur(10px);
+
+      transition:0.4s ease;
+    }
+
+    .info-box:hover{
+      transform:translateX(8px);
+      background:rgba(255,255,255,0.18);
+    }
+
+    .info-box i{
+
+      width:55px;
+      height:55px;
+
+      display:flex;
+      justify-content:center;
+      align-items:center;
+
+      border-radius:50%;
+
+      background:white;
+      color:#ff5e00;
+
+      font-size:1.3rem;
+      flex-shrink:0;
+    }
+
+    .info-box h3{
+      font-size:1rem;
+      margin-bottom:4px;
+    }
+
+    .info-box p,
+    .info-box a{
+
+      color:white;
+      text-decoration:none;
+      font-size:0.95rem;
+      word-break:break-word;
+    }
+
+    /* =========================
+       RIGHT SECTION
+    ========================= */
+
+    .contact-right{
+
+      flex:1 1 500px;
+      padding:60px 50px;
+      background:white;
+    }
+
+    .tag{
+
+      display:inline-block;
+
+      background:#fff3ea;
+      color:#ff5e00;
+
+      padding:8px 18px;
+
+      border-radius:30px;
+
+      font-size:0.9rem;
+      font-weight:600;
+
+      margin-bottom:18px;
+    }
+
+    .contact-right h2{
+
+      font-size:2.7rem;
+      color:#1f2937;
+
+      margin-bottom:12px;
+    }
+
+    .contact-right .subtitle{
+
+      color:#6b7280;
+      line-height:1.8;
+
+      margin-bottom:35px;
+    }
+
+    /* =========================
+       FORM
+    ========================= */
+
+    .input-group{
+      margin-bottom:22px;
+    }
+
+    .input-group label{
+
+      display:block;
+
+      margin-bottom:10px;
+
+      color:#374151;
+      font-weight:600;
+    }
+
+    .input-box{
+
+      position:relative;
+    }
+
+    .input-box i{
+
+      position:absolute;
+
+      left:18px;
+      top:50%;
+
+      transform:translateY(-50%);
+
+      color:#ff5e00;
+      font-size:1rem;
     }
 
     input,
-    textarea {
-      padding: 0.75rem 1rem;
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      font-size: 1rem;
-      transition: border-color 0.3s;
+    textarea{
+
+      width:100%;
+
+      padding:16px 18px 16px 50px;
+
+      border:2px solid #f3f4f6;
+
+      border-radius:16px;
+
+      font-size:1rem;
+
+      background:#fafafa;
+
+      transition:0.35s ease;
+    }
+
+    textarea{
+      min-height:140px;
+      resize:none;
+      padding-top:18px;
     }
 
     input:focus,
-    textarea:focus {
-      border-color: var(--primary);
-      outline: none;
+    textarea:focus{
+
+      border-color:#ff7a00;
+      background:white;
+
+      outline:none;
+
+      box-shadow:
+      0 8px 22px rgba(255,122,0,0.12);
     }
 
-    button {
-      padding: 0.75rem 1rem;
-      background-color: var(--primary);
-      color: white;
-      border: none;
-      border-radius: 10px;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background 0.3s ease;
+    /* =========================
+       BUTTON
+    ========================= */
+
+    .send-btn{
+
+      width:100%;
+
+      padding:17px;
+
+      border:none;
+
+      border-radius:18px;
+
+      background:
+      linear-gradient(
+      135deg,
+      #ff5e00,
+      #ff9500
+      );
+
+      color:white;
+
+      font-size:1rem;
+      font-weight:700;
+
+      cursor:pointer;
+
+      transition:0.4s ease;
+
+      box-shadow:
+      0 12px 25px rgba(255,94,0,0.25);
     }
 
-    button:hover {
-      background-color: #2563eb;
+    .send-btn:hover{
+
+      transform:translateY(-4px);
+
+      box-shadow:
+      0 18px 35px rgba(255,94,0,0.35);
     }
 
-    @media (max-width: 768px) {
-      .container {
-        flex-direction: column;
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media(max-width:950px){
+
+      .contact-container{
+        flex-direction:column;
+      }
+
+      .contact-left,
+      .contact-right{
+        padding:45px 28px;
+      }
+
+      .contact-left h1{
+        font-size:2.2rem;
+      }
+
+      .contact-right h2{
+        font-size:2rem;
       }
     }
+
   </style>
+
 </head>
 
 <body>
 
-  <div class="container">
+  <section class="contact-container">
 
     <!-- LEFT SIDE -->
-    <div class="left info">
-      <h2>📬 Contact Info</h2>
 
-      <p>
-        <strong>Phone:</strong>
-        +91-6360928405
-      </p>
+    <div class="contact-left">
 
-      <p>
-        <strong>Email:</strong>
-        <a href="mailto:Samarthsmane004@gmail.com">
-          Samarthsmane004@gmail.com
-        </a>
-      </p>
+      <div class="left-content">
 
-      <p>
-        <strong>LinkedIn:</strong>
-        <a href="https://linkedin.com/in/samarth-mane-930a12257" target="_blank">
-          www.linkedin.com/in/samarth-mane-930a12257
-        </a>
-      </p>
+        <h1>
+          Let's Build Something Amazing 🚀
+        </h1>
+
+        <p>
+          Have a project idea, collaboration opportunity,
+          or just want to connect?
+          Feel free to reach out anytime.
+        </p>
+
+        <!-- CONTACT INFO -->
+
+        <div class="contact-info">
+
+          <div class="info-box">
+
+            <i class="fa-solid fa-phone"></i>
+
+            <div>
+              <h3>Phone</h3>
+              <p>+91 6360928405</p>
+            </div>
+
+          </div>
+
+          <div class="info-box">
+
+            <i class="fa-solid fa-envelope"></i>
+
+            <div>
+              <h3>Email</h3>
+
+              <a href="mailto:Samarthsmane004@gmail.com">
+                Samarthsmane004@gmail.com
+              </a>
+            </div>
+
+          </div>
+
+          <div class="info-box">
+
+            <i class="fa-brands fa-linkedin-in"></i>
+
+            <div>
+              <h3>LinkedIn</h3>
+
+              <a href="https://linkedin.com/in/samarth-mane-930a12257"
+                 target="_blank">
+
+                 linkedin.com/in/samarth-mane-930a12257
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
     </div>
 
     <!-- RIGHT SIDE -->
-    <div class="right">
-      <h2>✉️ Send a Message</h2>
+
+    <div class="contact-right">
+
+      <span class="tag">
+        ✨ Contact Me
+      </span>
+
+      <h2>
+        Send Me a Message
+      </h2>
+
+      <p class="subtitle">
+        I would love to hear from you.
+        Fill out the form below and
+        I’ll get back to you as soon as possible.
+      </p>
+
+      <!-- FORM -->
 
       <form id="contactForm">
 
-        <input
-          type="text"
-          id="name"
-          placeholder="Your Name"
-          required
-        />
+        <div class="input-group">
 
-        <input
-          type="email"
-          id="email"
-          placeholder="Your Email"
-          required
-        />
+          <label>Your Name</label>
 
-        <input
-          type="text"
-          id="phone"
-          placeholder="Your Phone Number"
-        />
+          <div class="input-box">
 
-        <textarea
-          id="message"
-          rows="5"
-          placeholder="Your Message"
-          required
-        ></textarea>
+            <i class="fa-solid fa-user"></i>
 
-        <button type="submit">
-          Send
+            <input
+              type="text"
+              id="name"
+              placeholder="Enter your name"
+              required>
+
+          </div>
+
+        </div>
+
+        <div class="input-group">
+
+          <label>Email Address</label>
+
+          <div class="input-box">
+
+            <i class="fa-solid fa-envelope"></i>
+
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter your email"
+              required>
+
+          </div>
+
+        </div>
+
+        <div class="input-group">
+
+          <label>Phone Number</label>
+
+          <div class="input-box">
+
+            <i class="fa-solid fa-phone"></i>
+
+            <input
+              type="text"
+              id="phone"
+              placeholder="Enter your phone number">
+
+          </div>
+
+        </div>
+
+        <div class="input-group">
+
+          <label>Your Message</label>
+
+          <div class="input-box">
+
+            <i class="fa-solid fa-message"></i>
+
+            <textarea
+              id="message"
+              placeholder="Write your message..."
+              required></textarea>
+
+          </div>
+
+        </div>
+
+        <button type="submit"
+                class="send-btn">
+
+          Send Message 🚀
+
         </button>
 
       </form>
+
     </div>
-  </div>
-  <script>
 
-document.getElementById("contactForm")
-.addEventListener("submit", async function(e) {
+  </section>
 
-    e.preventDefault();
-
-    const data = {
-
-        name: document.getElementById("name").value.trim(),
-
-        email: document.getElementById("email").value.trim(),
-
-        phone: document.getElementById("phone").value.trim(),
-
-        message: document.getElementById("message").value.trim()
-    };
-
-    console.log("Sending:", data);
-
-    try {
-
-        const response = await fetch(
-            "http://localhost:1818/api/contact",
-            {
-
-                method: "POST",
-
-                headers: {
-                    "Content-Type": "application/json"
-                },
-
-                body: JSON.stringify(data)
-            }
-        );
-
-        const result = await response.json();
-
-        console.log(result);
-
-        alert(result.message);
-
-        document.getElementById("contactForm").reset();
-
-    } catch(error) {
-
-        console.error(error);
-
-        alert("Failed to send message.");
-    }
-
-});
-
-</script>
+  <!-- JS -->
 
   <script>
 
-document.getElementById("contactForm")
-.addEventListener("submit", async function(e) {
+    document.getElementById("contactForm")
+    .addEventListener("submit",
+    async function(e){
 
-    e.preventDefault();
+      e.preventDefault();
 
-    const data = {
+      const data = {
 
-        name: document.getElementById("name").value.trim(),
+        name:
+        document.getElementById("name")
+        .value.trim(),
 
-        email: document.getElementById("email").value.trim(),
+        email:
+        document.getElementById("email")
+        .value.trim(),
 
-        phone: document.getElementById("phone").value.trim(),
+        phone:
+        document.getElementById("phone")
+        .value.trim(),
 
-        message: document.getElementById("message").value.trim()
-    };
+        message:
+        document.getElementById("message")
+        .value.trim()
+      };
 
-    console.log("Sending:", data);
+      try{
 
-    try {
+        const response =
+        await fetch(
+        "http://localhost:1818/api/contact",
+        {
 
-        const response = await fetch(
-            "http://localhost:1818/api/contact",
-            {
+          method:"POST",
 
-                method: "POST",
+          headers:{
+            "Content-Type":
+            "application/json"
+          },
 
-                headers: {
-                    "Content-Type": "application/json"
-                },
+          body:JSON.stringify(data)
+        });
 
-                body: JSON.stringify(data)
-            }
-        );
-
-        const result = await response.json();
-
-        console.log(result);
+        const result =
+        await response.json();
 
         alert(result.message);
 
-        document.getElementById("contactForm").reset();
+        document.getElementById("contactForm")
+        .reset();
 
-    } catch(error) {
+      }
 
-        console.error(error);
+      catch(error){
 
-        alert("Failed to send message.");
-    }
+        alert(
+        "Failed to send message."
+        );
 
-});
+      }
 
-</script>
-<script src="api.js"></script>
+    });
+
+  </script>
+
 </body>
 </html>

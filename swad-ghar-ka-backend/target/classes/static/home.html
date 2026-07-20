@@ -636,8 +636,8 @@
 /* FLOATING MENU BAR */
 .floating-menu{
     width: 85%;
-    margin: 25px auto;
     padding: 15px 20px;
+
     background: rgba(255,255,255,0.9);
     backdrop-filter: blur(10px);
 
@@ -648,12 +648,14 @@
 
     border-radius: 60px;
 
-    box-shadow:
-    0px 5px 20px rgba(0,0,0,0.15);
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
 
-    position: sticky;
-    top: 95px;
     z-index: 999;
+
+    box-shadow: 0px 5px 20px rgba(0,0,0,0.15);
 }
 
 /* MENU BUTTON */
@@ -786,6 +788,377 @@
     background-color:#ff006e;
 }
 
+/* ===========================
+   POPUP OVERLAY
+=========================== */
+
+.popup{
+    position: fixed;
+    inset: 0;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(0,0,0,0.35);
+    backdrop-filter: blur(12px);
+
+    z-index: 9999;
+}
+
+/* ===========================
+   POPUP CARD
+=========================== */
+
+.popup-card{
+
+    position: relative;
+
+    width: 90%;
+    max-width: 650px;
+
+    padding: 45px;
+
+    text-align: center;
+
+    border-radius: 30px;
+
+    overflow: hidden;
+
+    color: white;
+
+    background:
+    linear-gradient(
+        145deg,
+        #111827,
+        #1f2937,
+        #ff6b35
+    );
+
+    border: 1px solid rgba(255,255,255,0.1);
+
+    box-shadow:
+    0 20px 60px rgba(0,0,0,0.4),
+    0 0 40px rgba(255,107,53,0.25);
+
+    animation: popupShow .8s ease;
+}
+
+/* Decorative Glow Circles */
+
+.popup-card::before{
+
+    content: "";
+
+    position: absolute;
+
+    width: 260px;
+    height: 260px;
+
+    background: rgba(255,255,255,0.08);
+
+    border-radius: 50%;
+
+    top: -120px;
+    right: -80px;
+}
+
+.popup-card::after{
+
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    background: rgba(255,255,255,0.06);
+
+    border-radius: 50%;
+
+    bottom: -70px;
+    left: -60px;
+}
+
+/* ===========================
+   OPENING ANIMATION
+=========================== */
+
+@keyframes popupShow{
+
+    from{
+        opacity: 0;
+        transform: translateY(40px) scale(.8);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* ===========================
+   CLOSE BUTTON
+=========================== */
+
+.close-btn{
+
+    position: absolute;
+
+    top: 15px;
+    right: 20px;
+
+    width: 40px;
+    height: 40px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.1);
+
+    color: white;
+
+    font-size: 24px;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.close-btn:hover{
+
+    background: #ff6b35;
+
+    transform: rotate(90deg);
+}
+
+/* ===========================
+   HEADING
+=========================== */
+
+.popup-card h1{
+
+    font-size: 2.8rem;
+
+    margin-bottom: 20px;
+
+    font-weight: 700;
+
+    background:
+    linear-gradient(
+        90deg,
+        #ffd166,
+        #ffffff
+    );
+
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* ===========================
+   DESCRIPTION
+=========================== */
+
+.popup-card p{
+
+    font-size: 1.05rem;
+
+    line-height: 1.8;
+
+    color: #e5e7eb;
+
+    margin-bottom: 35px;
+}
+
+/* ===========================
+   FEATURES
+=========================== */
+
+.features{
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 35px;
+}
+
+.feature{
+
+    background: rgba(255,255,255,0.08);
+
+    padding: 12px 18px;
+
+    border-radius: 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    transition: .3s;
+}
+
+.feature:hover{
+
+    transform: translateY(-5px);
+
+    background: rgba(255,255,255,0.15);
+}
+
+.feature span{
+
+    font-size: .95rem;
+}
+
+/* ===========================
+   FLOATING ICONS
+=========================== */
+
+.floating-icons{
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    font-size: 2rem;
+
+    margin-bottom: 25px;
+}
+
+.floating-icons span{
+
+    animation: float 3s infinite ease-in-out;
+}
+
+.floating-icons span:nth-child(2){
+    animation-delay: .5s;
+}
+
+.floating-icons span:nth-child(3){
+    animation-delay: 1s;
+}
+
+.floating-icons span:nth-child(4){
+    animation-delay: 1.5s;
+}
+
+@keyframes float{
+
+    0%,100%{
+        transform: translateY(0);
+    }
+
+    50%{
+        transform: translateY(-12px);
+    }
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.buttons{
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+}
+
+.btn{
+
+    text-decoration: none;
+
+    padding: 14px 28px;
+
+    border-radius: 50px;
+
+    font-weight: 600;
+
+    transition: .3s;
+}
+
+/* Primary Button */
+
+.primary{
+
+    background:
+    linear-gradient(
+        135deg,
+        #ff6b35,
+        #ffb347
+    );
+
+    color: white;
+
+    box-shadow:
+    0 8px 20px rgba(255,107,53,.4);
+}
+
+.primary:hover{
+
+    transform: translateY(-5px);
+
+    box-shadow:
+    0 15px 30px rgba(255,107,53,.6);
+}
+
+/* Secondary Button */
+
+.secondary{
+
+    border: 2px solid rgba(255,255,255,.3);
+
+    color: white;
+}
+
+.secondary:hover{
+
+    background: white;
+
+    color: #111827;
+
+    transform: translateY(-5px);
+}
+
+/* ===========================
+   MOBILE DESIGN
+=========================== */
+
+@media(max-width:600px){
+
+    .popup-card{
+
+        padding: 30px 20px;
+    }
+
+    .popup-card h1{
+
+        font-size: 2rem;
+    }
+
+    .buttons{
+
+        flex-direction: column;
+    }
+
+    .btn{
+
+        width: 100%;
+    }
+}
 
     </style>
 </head>
@@ -870,7 +1243,7 @@
             <h3>South Indian Thali</h3>
         </a>
 
-		<a href="#kaju" class="food-card">
+		<a href="#kachori" class="food-card">
             <img src="lunch/kachori.jpeg" alt="Kachori">
             <h3>Kachori</h3>
         </a>
@@ -950,7 +1323,7 @@
             <img src="images/idli.jpg"
                  alt="Idli"
                  onclick="addToCart('Idli', 45)"
-                 class="food-img">
+                 class="food-img" id="idli">
 
             <div class="food-info">
                 <h2>Idli</h2>
@@ -964,10 +1337,10 @@
 
         <!-- 2 -->
         <div class="break_item">
-            <img src="images/dosa.jpeg"
+            <img src="breakfast/crispy-masala-dosa.webp"
                  alt="Dosa"
                  onclick="addToCart('Dosa', 55)"
-                 class="food-img">
+                 class="food-img" id="dosa">
 
             <div class="food-info">
                 <h2>Dosa</h2>
@@ -1032,7 +1405,7 @@
 
         <!-- 6 -->
         <div class="break_item">
-            <img src="breakfast/sheera.jpeg"
+            <img src="breakfast/sheeraimg1.webp"
                  alt="Sheera"
                  onclick="addToCart('Sheera', 40)"
                  class="food-img">
@@ -1049,7 +1422,7 @@
 
         <!-- 7 -->
         <div class="break_item">
-            <img src="breakfast/uttapam.jpeg"
+            <img src="breakfast/uthappamnew.webp"
                  alt="Uttapam"
                  onclick="addToCart('Uttapam', 60)"
                  class="food-img">
@@ -1299,7 +1672,7 @@
 
         <!-- 9 -->
         <div class="lunch_item">
-            <img src="lunch/kajuKurma.avif"
+            <img src="lunch/kajuMasala1.webp"
                  alt="Kaju Kurma"
                  onclick="addToCart('Kaju Kurma', 160)"
                  class="food-img">
@@ -2146,7 +2519,8 @@
 
         <!-- 8 -->
         <div class="snacks_item">
-            <img src="lunch/gobi manchuriam.jpeg"
+            <img src="lunch/gobi manchurian.webp
+            "
                  alt="Gobi Manchurian"
                  onclick="addToCart('Gobi Manchurian', 100)"
                  class="food-img">
@@ -2251,7 +2625,7 @@
             <img src="lunch/kachori.jpeg"
                  alt="Kachori"
                  onclick="addToCart('Kachori', 30)"
-                 class="food-img">
+                 class="food-img" id="kachori">
 
             <div class="food-info">
                 <h2>Kachori</h2>
@@ -2582,7 +2956,7 @@
         
         <!-- 13 -->
 <div class="sweet_item">
-    <img src="sweets/kalakand.jpg"
+    <img src="sweets/kalakands.webp"
          alt="Kalakand"
          onclick="addToCart('Kalakand', 160)"
          class="food-img">
@@ -2701,7 +3075,7 @@
 
 <!-- 20 -->
 <div class="sweet_item">
-    <img src="sweets/mix.jpg"
+    <img src="sweets/mixpeda.webp"
          alt="Mix Peda"
          onclick="addToCart('Mix Peda', 150)"
          class="food-img">
@@ -3146,78 +3520,73 @@ function toggleTheme() {
     
   </div>
 </footer>
-<div id="popup" class="popup">
-  <div class="popup-content">
-    <span class="close-btn">&times;</span>
-    <h2>Welcome to Spice Delight! 🍛</h2>
-    <p>Click on the Thali to make a customizable Thali 🥗 & <br>Don't miss to click on the Rush Hours Great deals are waiting for you.🔥🎁<br>To select the item Click on the particular image</p>
-  </div>
+
+
+<div id="welcomePopup" class="popup">
+
+    <div class="popup-card">
+
+        <button class="close-btn">&times;</button>
+
+        <div class="floating-icons">
+            <span>🍕</span>
+            <span>🍔</span>
+            <span>🍜</span>
+            <span>🍰</span>
+        </div>
+
+        <h1>Welcome to Spice Delight ✨</h1>
+
+        <p>
+            Experience handcrafted meals, customizable Thalis,
+            exclusive student offers and exciting rush-hour deals.
+        </p>
+
+        <div class="buttons">
+            <a href="home.html" class="btn primary">
+                Explore Menu
+            </a>
+
+            <a href="mess.html" class="btn secondary">
+                Student Meals
+            </a>
+        </div>
+
+    </div>
+
 </div>
-
-<div id="popupp" class="popupp">
-  <div class="popupp-content">
-    <span class="close-butn">&times;</span>
-    <h2>Welcome to Spice Delight! 🍛</h2>
-<p><a href="mess.html">Click here for the students for the daily Food(Mess)</a></p>
-  </div>
-</div>
-
-
 <script>
-  window.onload = function () {
-    const popup = document.getElementById("popupp");
-    const closeBtn = document.querySelector(".close-butn");
+window.onload = () => {
 
-    // Check if popup was already shown
-    const hasVisited = sessionStorage.getItem("hasVisited");
-
-    if (!hasVisited) {
-      // Show the popup after 3 seconds
-      setTimeout(() => {
-        popup.style.display = "block";
-        sessionStorage.setItem("hasVisited", "true"); // Mark as shown
-      }, 10000);
-    }
-
-    // Close on clicking X
-    closeBtn.onclick = () => popup.style.display = "none";
-
-    // Close on clicking outside
-    window.onclick = function (event) {
-      if (event.target === popup) {
-        popup.style.display = "none";
-      }
-    };
-  };
-</script>
-
-
-<script>
-  window.onload = function () {
-    const popup = document.getElementById("popup");
+    const popup = document.getElementById("welcomePopup");
     const closeBtn = document.querySelector(".close-btn");
 
-    // Check if popup was already shown
-    const hasVisited = sessionStorage.getItem("hasVisited");
+    if(!sessionStorage.getItem("visited")){
 
-    if (!hasVisited) {
-      // Show the popup after 3 seconds
-      setTimeout(() => {
-        popup.style.display = "block";
-        sessionStorage.setItem("hasVisited", "true"); // Mark as shown
-      }, 3000);
+        setTimeout(()=>{
+
+            popup.style.display = "flex";
+
+            sessionStorage.setItem("visited","true");
+
+        },2000);
     }
 
-    // Close on clicking X
-    closeBtn.onclick = () => popup.style.display = "none";
+    closeBtn.addEventListener("click",()=>{
 
-    // Close on clicking outside
-    window.onclick = function (event) {
-      if (event.target === popup) {
-        popup.style.display = "none";
-      }
-    };
-  };
+        popup.style.display="none";
+    });
+
+    popup.addEventListener("click",(e)=>{
+
+        if(e.target===popup){
+            popup.style.display="none";
+        }
+    });
+};
+</script>
+<script>
+
   
 //SHOW BUTTON WHEN SCROLLING DOWN
  // SHOW BUTTON ON SCROLL

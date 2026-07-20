@@ -1,9 +1,9 @@
 package com.swadgharka.model;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.AllArgsConstructor;
 
 @Entity
 @Table(name = "menu_items")
@@ -25,13 +25,12 @@ public class MenuItem {
     @Column(nullable = false)
     private Double price;
 
-    // e.g. Breakfast, Lunch, Dinner, Snacks, Dessert, Drinks
     @Column(nullable = false)
     private String category;
 
     private String imageUrl;
 
-    private boolean isVeg = true;
+    private boolean veg = true;
 
     private boolean available = true;
 

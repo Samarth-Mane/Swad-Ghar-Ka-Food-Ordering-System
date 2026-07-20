@@ -3,125 +3,436 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Swad Ghar Ka - By Samarth Mane|About Me</title>
+  <title>Swad Ghar Ka | About Me</title>
+
+  <!-- ICONS -->
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
   <style>
-    
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Segoe UI", sans-serif;
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
     }
 
-    body {
-      background-color: #f3f4f6;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      padding: 2rem;
+    body{
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:40px 20px;
+      background:
+      linear-gradient(
+      135deg,
+      #fff6ef,
+      #ffe5d0,
+      #fff0e1
+      );
+      overflow-x:hidden;
     }
 
-    .about-container {
-      background-color: #fff;
-      border-radius: 20px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-      display: flex;
-      flex-wrap: wrap;
-      max-width: 1000px;
-      overflow: hidden;
-      width: 100%;
+    /* =========================
+       MAIN CONTAINER
+    ========================= */
+
+    .about-container{
+      width:100%;
+      max-width:1200px;
+      background:white;
+      border-radius:35px;
+      overflow:hidden;
+      display:flex;
+      flex-wrap:wrap;
+      position:relative;
+      box-shadow:
+      0 20px 60px rgba(0,0,0,0.12);
     }
 
-    .about-left, .about-right {
-      flex: 1 1 400px;
-      padding: 2rem;
+    /* =========================
+       LEFT SECTION
+    ========================= */
+
+    .about-left{
+      flex:1 1 420px;
+      background:
+      linear-gradient(
+      135deg,
+      #ff5e00,
+      #ff8a00
+      );
+      position:relative;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:50px 30px;
+      overflow:hidden;
     }
 
-    .about-left {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: #e5e7eb;
+    /* GLOW CIRCLES */
+
+    .about-left::before{
+      content:"";
+      position:absolute;
+      width:320px;
+      height:320px;
+      background:rgba(255,255,255,0.1);
+      border-radius:50%;
+      top:-80px;
+      left:-80px;
     }
 
-    .about-left img {
-      width: 220px;
-      height: 220px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 5px solid #fff;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    .about-left::after{
+      content:"";
+      position:absolute;
+      width:250px;
+      height:250px;
+      background:rgba(255,255,255,0.08);
+      border-radius:50%;
+      bottom:-80px;
+      right:-80px;
     }
 
-    .about-right h2 {
-      font-size: 2rem;
-      color: #2563eb;
-      margin-bottom: 0.5rem;
+    .image-box{
+      position:relative;
+      z-index:2;
+      text-align:center;
     }
 
-    .about-right h4 {
-      color: #6b7280;
-      font-size: 1.1rem;
-      margin-bottom: 1.5rem;
-      height: 24px;
+    .image-box img{
+      width:280px;
+      height:280px;
+      object-fit:cover;
+      border-radius:50%;
+      border:8px solid rgba(255,255,255,0.9);
+      box-shadow:
+      0 15px 35px rgba(0,0,0,0.25);
+      transition:0.5s ease;
     }
 
-    .about-right p {
-      font-size: 1rem;
-      color: #374151;
-      line-height: 1.6;
-      margin-bottom: 1rem;
+    .image-box img:hover{
+      transform:scale(1.04);
     }
 
-    @media (max-width: 768px) {
-      .about-container {
-        flex-direction: column;
-        text-align: center;
+    /* =========================
+       RIGHT SECTION
+    ========================= */
+
+    .about-right{
+      flex:1 1 500px;
+      padding:60px 50px;
+      position:relative;
+    }
+
+    .tag{
+      display:inline-block;
+      background:#fff2e8;
+      color:#ff5e00;
+      padding:8px 18px;
+      border-radius:30px;
+      font-size:0.9rem;
+      font-weight:600;
+      margin-bottom:22px;
+    }
+
+    .about-right h1{
+      font-size:3rem;
+      color:#1f2937;
+      margin-bottom:12px;
+      line-height:1.2;
+    }
+
+    .typing-text{
+      color:#ff5e00;
+      font-size:1.25rem;
+      font-weight:700;
+      margin-bottom:25px;
+      min-height:32px;
+    }
+
+    .about-right p{
+      color:#4b5563;
+      line-height:1.9;
+      font-size:1rem;
+      margin-bottom:18px;
+    }
+
+    /* =========================
+       STATS SECTION
+    ========================= */
+
+    .stats{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+      margin-top:35px;
+    }
+
+    .stat-box{
+      background:#fff7f2;
+      border:1px solid #ffe0cc;
+      border-radius:22px;
+      padding:22px 15px;
+      text-align:center;
+      transition:0.4s ease;
+    }
+
+    .stat-box:hover{
+      transform:translateY(-8px);
+      background:#ffefe4;
+    }
+
+    .stat-box i{
+      font-size:1.8rem;
+      color:#ff5e00;
+      margin-bottom:10px;
+    }
+
+    .stat-box h3{
+      font-size:1.6rem;
+      color:#111827;
+      margin-bottom:6px;
+    }
+
+    .stat-box p{
+      font-size:0.9rem;
+      margin:0;
+      color:#6b7280;
+    }
+
+    /* =========================
+       BUTTONS
+    ========================= */
+
+    .buttons{
+      margin-top:35px;
+      display:flex;
+      gap:18px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      text-decoration:none;
+      padding:14px 28px;
+      border-radius:50px;
+      font-weight:600;
+      transition:0.4s ease;
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+    }
+
+    .btn-primary{
+      background:linear-gradient(
+      135deg,
+      #ff5e00,
+      #ff9500
+      );
+      color:white;
+      box-shadow:
+      0 10px 25px rgba(255,94,0,0.25);
+    }
+
+    .btn-primary:hover{
+      transform:translateY(-4px);
+    }
+
+    .btn-secondary{
+      border:2px solid #ff5e00;
+      color:#ff5e00;
+    }
+
+    .btn-secondary:hover{
+      background:#ff5e00;
+      color:white;
+    }
+
+    /* =========================
+       SOCIAL ICONS
+    ========================= */
+
+    .social-icons{
+      margin-top:35px;
+      display:flex;
+      gap:16px;
+    }
+
+    .social-icons a{
+      width:50px;
+      height:50px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:#fff4ec;
+      color:#ff5e00;
+      font-size:1.2rem;
+      transition:0.4s ease;
+      text-decoration:none;
+    }
+
+    .social-icons a:hover{
+      background:#ff5e00;
+      color:white;
+      transform:translateY(-5px);
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media(max-width:950px){
+
+      .about-container{
+        flex-direction:column;
       }
 
-      .about-left {
-        padding-bottom: 0;
+      .about-right{
+        padding:45px 28px;
+      }
+
+      .about-right h1{
+        font-size:2.3rem;
+      }
+
+      .stats{
+        grid-template-columns:1fr;
+      }
+
+      .image-box img{
+        width:220px;
+        height:220px;
       }
     }
+
   </style>
 </head>
 <body>
 
-  <div class="about-container">
-    <!-- Left Side Image -->
+  <section class="about-container">
+
+    <!-- LEFT SIDE -->
     <div class="about-left">
-    <img src="image.jpeg" alt="My Image">
+
+      <div class="image-box">
+        <img src="image.jpeg" alt="Samarth Mane">
+      </div>
+
     </div>
 
-    <!-- Right Side Content -->
+    <!-- RIGHT SIDE -->
     <div class="about-right">
-      <h2>Hi, I'm Samarth Mane</h2>
-      <h4 id="typing-text">"Web Developer | Designer | Tech Enthusiast"</h4>
+
+      <span class="tag">
+        ✨ About The Creator
+      </span>
+
+      <h1>
+        Hi, I'm Samarth Mane
+      </h1>
+
+      <div class="typing-text" id="typing-text"></div>
+
       <p>
-        I'm a passionate web developer who loves building interactive and responsive websites. This project is fully developed by me to showcase my learning and creativity using just HTML, CSS, and JavaScript.
+        Passionate Full Stack Developer and creative tech enthusiast focused on building modern, responsive, and interactive web experiences that blend performance with beautiful design.
       </p>
+
       <p>
-        I'm always exploring new technologies and frameworks to stay up-to-date with the latest trends. Feel free to explore the site and check out my work.
+        Swad Ghar Ka is more than just a food website — it represents my creativity, development skills, UI/UX vision, and passion for creating real-world digital experiences using modern web technologies.
       </p>
+
+      <!-- STATS -->
+      <div class="stats">
+
+        <div class="stat-box">
+          <i class="fa-solid fa-code"></i>
+          <h3>15+</h3>
+          <p>Projects Built</p>
+        </div>
+
+        <div class="stat-box">
+          <i class="fa-solid fa-laptop-code"></i>
+          <h3>Full Stack</h3>
+          <p>Developer</p>
+        </div>
+
+        <div class="stat-box">
+  			<i class="fa-solid fa-cloud"></i>
+  			<h3>AWS Cloud</h3>
+  			<p>Developer</p>
+		</div>
+
+      </div>
+
+      <!-- BUTTONS -->
+      <div class="buttons">
+
+        <a href="home.html" class="btn btn-primary">
+          <i class="fa-solid fa-user"></i>
+          Explore More
+        </a>
+
+        <a href="contact.html" class="btn btn-secondary">
+          <i class="fa-solid fa-envelope"></i>
+          Contact Me
+        </a>
+
+      </div>
+
+      <!-- SOCIAL ICONS -->
+      <div class="social-icons">
+
+        <a href="#">
+          <i class="fab fa-github"></i>
+        </a>
+
+        <a href="#">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+
+        <a href="#">
+          <i class="fab fa-instagram"></i>
+        </a>
+
+        <a href="#">
+          <i class="fab fa-twitter"></i>
+        </a>
+
+      </div>
+
     </div>
-  </div>
 
-  <!-- JS Typing Effect -->
+  </section>
+
+  <!-- TYPING EFFECT -->
+
   <script>
-    // const text = "Web Developer | Designer | Tech Enthusiast";
-    // const typingText = document.getElementById("typing-text");
-    // let index = 0;
 
-    // function type() {
-    //   typingText.textContent = text.slice(0, index++);
-    //   if (index <= text.length) {
-    //     setTimeout(type, 100);
-    //   }
-    // }
+    const text =
+    "Full Stack Developer | AWS Cloud Developer | Tech Enthusiast";
 
-    // window.onload = type;
+    const typingText =
+    document.getElementById("typing-text");
+
+    let index = 0;
+
+    function typeEffect(){
+
+      typingText.textContent =
+      text.slice(0,index++);
+
+      if(index <= text.length){
+
+        setTimeout(typeEffect,90);
+
+      }
+
+    }
+
+    window.onload = typeEffect;
+
   </script>
 
 </body>
